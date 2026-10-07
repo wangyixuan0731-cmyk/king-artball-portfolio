@@ -1,0 +1,13 @@
+Oil Motion 2D pointer grid prompt template
+
+Use case: identity-preserve
+Asset type: transparent 2D pointer-follow keyframe
+Reference: avatar-a-compact-chibi.png is the identity, style, scale, composition, and exact canvas-position reference.
+Subject invariants: black-brown medium-long loose hair, curtain bangs, black round glasses, fair skin, black eyes, white camisole, black shrug, washed-blue wide jeans, black sneakers.
+Allowed motion: turn or tilt only the head and face toward <DIRECTION>; shift both pupils toward <DIRECTION>; allow only a tiny matching movement in the front hair strands.
+Locked motion: shoulders, torso, arms, hands, jeans, shoes, feet, body silhouette, full-body scale, center, and bottom anchor remain fixed.
+Style: identical coarse-grain Q-version pixel art, pixel size, dark-brown outline, lighting, and palette.
+Canvas: exact 1230×1278 transparent canvas.
+Negative constraints: no identity drift, blinking, smile change, extra limbs, accessories, text, background shadow, watermark, crop, zoom, or position drift.
+
+Directions: nw, n, ne, w, center, e, sw, s, se.

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "image": "avatar-peek-atlas-stars-v2.png",
+  "frameCount": 2,
+  "columns": 2,
+  "rows": 1,
+  "cellWidth": 1230,
+  "cellHeight": 1278,
+  "renderer": "css-alpha-atlas",
+  "fallbackFrame": 0
+}

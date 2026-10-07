@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "approvedAt": "2026-10-06T11:39:39.329003+00:00",
+  "reviewer": "Codex",
+  "continuityMode": "independent",
+  "notes": "Alpha-atlas 2D pointer Pilot: identity, alpha, size and bottom anchor passed visual review; source field pilotVideo records the pilot atlas because this route does not use video.",
+  "artifacts": {
+    "conceptContract": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/motion/source/concept-contract.yaml",
+      "bytes": 1010,
+      "sha256": "e4f8ff718522127beca4f86d8bcebd93369e5641308e066d13491a5f88f24ab7"
+    },
+    "firstFrame": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/motion/source/frames/center.png",
+      "bytes": 552957,
+      "sha256": "bce9683f275d350bcd378bbe4b7d14fb33b18fdabfa0dc711d89d0f2dcbceb82"
+    },
+    "lastFrame": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/motion/source/frames/e.png",
+      "bytes": 540839,
+      "sha256": "1c40220bdb470bf1a5ff65bde85395ac92d491e92004a1f7595567e129757ddc"
+    },
+    "pilotVideo": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/motion/pilot/pilot.webp",
+      "bytes": 734378,
+      "sha256": "7d623edbba5478578b095b3c6c3acf540021c51146f89c93a054cae0a3da1935"
+    },
+    "pageEvidence": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/motion/pilot/page-right.png",
+      "bytes": 129789,
+      "sha256": "ba7d4b992a43e05921d6e40c813a84ea542b5ac963577e27400209342aaeff49"
+    },
+    "identityBible": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/motion/source/identity-bible.md",
+      "bytes": 698,
+      "sha256": "032834effc392016da5d2289a9971003e4dbde69b83e75a549d683288ac5e918"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "viewport": "1024x576 browser preview; desktop-only page retains its 1180px minimum canvas",
+  "initialState": "center",
+  "directionSamples": {
+    "nw": "pass",
+    "n": "pass",
+    "ne": "pass",
+    "w": "pass",
+    "center": "pass",
+    "e": "pass",
+    "sw": "pass",
+    "s": "pass",
+    "se": "pass"
+  },
+  "fastReverse": "pass; intermediate center-column frame observed before reaching the opposite diagonal",
+  "alpha": "pass; all frame corners transparent",
+  "atlas": "pass; 3690x3834, 3x3, lossless WebP, below 4096 texture limit",
+  "fallback": "pass; static PNG remains visible until atlas decode and on reduced-motion or load failure",
+  "consoleWarningsOrErrors": 0
+}

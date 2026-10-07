@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "fps": 12,
+  "frameDuration": 0.0833333333,
+  "initialState": "off-edge",
+  "states": [
+    { "id": "off-edge", "hold": 0 },
+    { "id": "peek", "hold": 1.4 },
+    { "id": "curious-tilt", "hold": 3.8 }
+  ],
+  "segments": [
+    {
+      "id": "enter",
+      "from": "off-edge",
+      "to": "peek",
+      "start": 0,
+      "hold": 1.4,
+      "endExclusive": 1.5,
+      "curve": { "type": "edge-mid-edge", "edgeRate": 1.15, "midRate": 0.75 }
+    },
+    {
+      "id": "look-and-retreat",
+      "from": "peek",
+      "to": "curious-tilt",
+      "start": 1.5,
+      "hold": 3.8,
+      "endExclusive": 7.8,
+      "curve": { "type": "edge-mid-edge", "edgeRate": 1.1, "midRate": 0.7 }
+    }
+  ],
+  "loopDuration": 7.8,
+  "actors": {
+    "bottomLeft": { "delay": 0, "frame": 0 },
+    "topRight": { "delay": 2.6, "frame": 1 }
+  }
+}

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noimageindex" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>Demo Lab · King Artball</title>
+    <style>
+      @font-face {
+        font-family: "Pixelify Sans";
+        src: url("../assets/PixelifySans.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 400 700;
+      }
+
+      :root {
+        --ink: #4a241d;
+        --cream: #fff5ca;
+        --paper: #fffaf0;
+        --sun: #ffd34e;
+        --orange: #ff7427;
+        --coral: #ff7165;
+        --gold: #ffb62d;
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        min-width: 1180px;
+        min-height: 100%;
+        background: var(--sun);
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 1180px;
+        min-height: 100vh;
+        margin: 0;
+        color: var(--ink);
+        font-family: "Pixelify Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+        background:
+          linear-gradient(rgba(255, 229, 137, 0.78), rgba(255, 188, 74, 0.72)),
+          url("../assets/pixel-woodland-background-v2.png") center / cover fixed no-repeat;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg, rgba(255, 249, 211, 0.28), transparent 44%, rgba(255, 116, 39, 0.08)),
+          rgba(255, 246, 202, 0.08);
+      }
+
+      .page-shell {
+        width: min(1450px, calc(100vw - 64px));
+        margin: 0 auto;
+        padding: 34px 0 50px;
+      }
+
+      .page-header {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: start;
+        gap: 22px;
+        margin-bottom: 30px;
+      }
+
+      .home-link {
+        display: inline-block;
+        padding: 10px 18px 8px;
+        border: 4px solid var(--ink);
+        background: var(--orange);
+        box-shadow: 5px 5px 0 var(--ink);
+        color: #fff9df;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        transition: transform 120ms steps(2, end), filter 120ms steps(2, end);
+      }
+
+      .home-link:hover,
+      .home-link:focus-visible {
+        transform: translate(-2px, -3px);
+        filter: saturate(1.12) brightness(1.06);
+        outline: none;
+      }
+
+      .heading-group { margin-top: -3px; }
+
+      .kicker {
+        display: inline-block;
+        margin: 0 0 8px;
+        padding: 7px 12px 5px;
+        transform: rotate(-2deg);
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff8dd;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 58px;
+        line-height: 0.86;
+        letter-spacing: -0.035em;
+        text-shadow: 3px 3px 0 rgba(255, 246, 202, 0.82);
+      }
+
+      .page-note {
+        margin: 16px 0 0;
+        padding: 9px 14px 7px;
+        transform: rotate(1deg);
+        border: 3px solid var(--ink);
+        background: rgba(255, 246, 202, 0.94);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-size: 19px;
+        font-weight: 700;
+      }
+
+      .demo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        gap: 24px;
+      }
+
+      .demo-column {
+        --tilt: 0deg;
+        display: grid;
+        gap: 16px;
+        min-width: 0;
+      }
+
+      .demo-column:nth-child(1) { --tilt: -0.7deg; }
+      .demo-column:nth-child(2) { --tilt: 0.5deg; }
+      .demo-column:nth-child(3) { --tilt: -0.4deg; }
+
+      .pixel-card,
+      .video-frame {
+        border: 4px solid var(--ink);
+        box-shadow: 7px 8px 0 rgba(74, 36, 29, 0.92);
+      }
+
+      .demo-heading {
+        position: relative;
+        min-height: 132px;
+        padding: 20px 20px 16px;
+        transform: rotate(var(--tilt));
+        background: rgba(255, 250, 229, 0.98);
+      }
+
+      .demo-heading::after {
+        content: "✦";
+        position: absolute;
+        top: 14px;
+        right: 17px;
+        color: var(--orange);
+        font-size: 25px;
+      }
+
+      .demo-heading h2 {
+        margin: 0 38px 12px 0;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 1.2;
+      }
+
+      .demo-link-label {
+        display: inline-block;
+        margin-bottom: 6px;
+        padding: 4px 8px 3px;
+        background: var(--coral);
+        color: #fff9df;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .demo-url {
+        display: block;
+        color: #9b371f;
+        font-family: "Pixelify Sans", "PingFang SC", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+      }
+
+      .demo-url:hover,
+      .demo-url:focus-visible {
+        color: #d54c20;
+        outline: 3px dashed var(--orange);
+        outline-offset: 3px;
+      }
+
+      .video-frame {
+        position: relative;
+        display: grid;
+        height: 410px;
+        place-items: center;
+        overflow: hidden;
+        background:
+          linear-gradient(45deg, rgba(255, 211, 78, 0.12) 25%, transparent 25% 75%, rgba(255, 211, 78, 0.12) 75%),
+          #2e1b1a;
+        background-size: 28px 28px;
+      }
+
+      .video-frame::before {
+        content: "DEMO PLAY";
+        position: absolute;
+        z-index: 0;
+        top: 12px;
+        left: 12px;
+        padding: 4px 8px 3px;
+        background: var(--gold);
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      video {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #1f1514;
+        object-fit: contain;
+      }
+
+      .purpose-card {
+        min-height: 184px;
+        padding: 18px 19px 19px;
+        transform: rotate(calc(var(--tilt) * -0.65));
+        background: rgba(255, 245, 202, 0.98);
+      }
+
+      .purpose-title {
+        display: inline-block;
+        margin: 0 0 11px;
+        padding: 5px 10px 4px;
+        border: 3px solid var(--ink);
+        background: var(--orange);
+        box-shadow: 3px 3px 0 var(--ink);
+        color: #fff9df;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.04em;
+      }
+
+      .purpose-card p {
+        margin: 0;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.72;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .home-link { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <a class="home-link" href="../">home</a>
+        <div class="heading-group">
+          <p class="kicker">INTERACTIVE DESIGN</p>
+          <h1>Demo Lab</h1>
+        </div>
+        <p class="page-note">3 playable concepts ✦</p>
+      </header>
+
+      <section class="demo-grid" aria-label="三个 Demo 项目">
+        <article class="demo-column">
+          <header class="pixel-card demo-heading">
+            <h2>周末福利季卡</h2>
+            <span class="demo-link-label">DEMO LINK</span>
+            <a class="demo-url" href="https://a1049946017-gif.github.io/weekend-season-pass-demo/?v=5cddeae" target="_blank" rel="noopener noreferrer">a1049946017-gif.github.io/weekend-season-pass-demo/ ↗</a>
+          </header>
+          <div class="video-frame">
+            <video controls playsinline preload="metadata" aria-label="周末福利季卡 Demo 演示视频">
+              <source src="assets/weekend-season-pass.mp4" type="video/mp4" />
+              当前浏览器不支持视频播放。
+            </video>
+          </div>
+          <section class="pixel-card purpose-card">
+            <h3 class="purpose-title">DESIGN PURPOSE</h3>
+            <p>1.6版本春节，正值玩家有点小钱的阶段，通过高返利拉动中R付费，同时设置低档位让小R也能触达到，并且拉长返利周期促使玩家活跃（刚好能衔接到周年庆版本）</p>
+          </section>
+        </article>
+
+        <article class="demo-column">
+          <header class="pixel-card demo-heading">
+            <h2>外显付费</h2>
+            <span class="demo-link-label">DEMO LINK</span>
+            <a class="demo-url" href="https://a1049946017-gif.github.io/spring-festival-paid-event-demo/" target="_blank" rel="noopener noreferrer">a1049946017-gif.github.io/spring-festival-paid-event-demo/ ↗</a>
+          </header>
+          <div class="video-frame">
+            <video controls playsinline preload="metadata" aria-label="外显付费 Demo 演示视频">
+              <source src="assets/paid-visibility.mp4" type="video/mp4" />
+              当前浏览器不支持视频播放。
+            </video>
+          </div>
+          <section class="pixel-card purpose-card">
+            <h3 class="purpose-title">DESIGN PURPOSE</h3>
+            <p>额外外显付费带动收入，通过设置2个档位，小额面向小R的照片墙贴纸，以及大额面向大R的主界面氛围UI，尝试外显付费</p>
+          </section>
+        </article>
+
+        <article class="demo-column">
+          <header class="pixel-card demo-heading">
+            <h2>皮肤折扣券</h2>
+            <span class="demo-link-label">DEMO LINK</span>
+            <a class="demo-url" href="https://a1049946017-gif.github.io/newyear-skin-coupon-demo/" target="_blank" rel="noopener noreferrer">a1049946017-gif.github.io/newyear-skin-coupon-demo/ ↗</a>
+          </header>
+          <div class="video-frame">
+            <video controls playsinline preload="metadata" aria-label="皮肤折扣券 Demo 演示视频">
+              <source src="assets/skin-discount-coupon.mp4" type="video/mp4" />
+              当前浏览器不支持视频播放。
+            </video>
+          </div>
+          <section class="pixel-card purpose-card">
+            <h3 class="purpose-title">DESIGN PURPOSE</h3>
+            <p>促进往期皮肤售卖，部分玩家在往期皮肤限时折扣过期后皮肤购买欲望降低，永久皮肤折扣券可带动往期皮肤售卖。折扣券获得后不会过期，提高皮肤购买限时折扣的容错空间。</p>
+          </section>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

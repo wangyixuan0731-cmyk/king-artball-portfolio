@@ -1,0 +1,25 @@
+concept_contract: source/concept-contract.yaml
+identity_bible: source/identity-bible.md
+parameter_space: 2d
+media_access: random
+gesture_policy:
+  unit: continuous
+  inertia: coalesce
+  while_active: retarget
+  boundary: clamp
+  programmatic_navigation: ignore
+storyboard:
+  - "左上、上、右上"
+  - "左、中、右"
+  - "左下、下、右下"
+keyframes: [nw, n, ne, w, center, e, sw, s, se]
+clip_chain: "九张互不连续的透明关键姿态，运行时按二维邻域选择"
+rest_state: center
+loop: none
+anchor: bottom
+scene_continuity: ""
+frame_policy: native
+target_fps: 60
+quality_target: "1230×1278 单帧；最大 520 CSS px；目标 DPR 2；单张图集不超过 4096 px"
+pixel_dimensions: "1230x1278"
+reduced_motion: center

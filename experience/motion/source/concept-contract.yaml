@@ -1,0 +1,20 @@
+subject_count: 2
+subjects:
+  - identity: King Artball pixel avatar, bottom-left corner instance, star eyes looking upper-right
+  - identity: King Artball pixel avatar, top-right corner instance, star eyes looking lower-left
+style: q版粗颗粒像素风，与首页角色完全一致
+motion_intent: 两个角色从页面边缘探头、轻微左右观察后退回，错峰自动循环
+background_owner: page
+scene: 页面承担橙黄色像素树林背景，角色保持透明背景
+driver: time
+input_semantics: continuous
+time_control: autonomous
+navigation: none
+clip_continuity: independent
+continuity:
+  - 角色面部、发型、眼镜、服装和像素颗粒不变化
+  - 左下角角色保持星星眼向右上看，右上角角色保持星星眼向左下看
+  - 不跟随鼠标，不响应时间轴点击
+  - 两个角落角色错峰出现，避免同时抢夺视觉焦点
+aspect_ratio: custom
+destination: 桌面端左下角与右上角的页面边缘舞台，角色探出时需完整显示全身，仅退场时由页面边缘遮挡；单个角色最大显示约 280x292 CSS px，目标 DPR 2

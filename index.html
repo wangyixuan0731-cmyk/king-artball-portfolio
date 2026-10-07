@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>King Artball</title>
+    <style>
+      @font-face {
+        font-family: "Pixelify Sans";
+        src: url("assets/PixelifySans.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 400 700;
+      }
+
+      :root {
+        --ink: #4a241d;
+        --cream: #fff5ca;
+        --orange: #ff7427;
+        --coral: #ff6f65;
+      }
+
+      * { box-sizing: border-box; }
+
+      html,
+      body {
+        margin: 0;
+        min-width: 1180px;
+        min-height: 100%;
+        overflow: hidden;
+        background: #ffcf4e;
+      }
+
+      body {
+        min-height: 100vh;
+        color: var(--ink);
+        font-family: "Pixelify Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .desktop-frame {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        min-width: 1180px;
+        min-height: 738px;
+        overflow: hidden;
+        background: #ffd45a url("assets/pixel-woodland-background-v2.png") center / cover no-repeat;
+        isolation: isolate;
+      }
+
+      .desktop-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(90deg, rgba(255, 245, 190, 0.18) 0 28%, transparent 50%);
+      }
+
+      .info-zone {
+        position: absolute;
+        z-index: 5;
+        left: clamp(88px, 8vw, 170px);
+        top: 21.5%;
+        width: clamp(390px, 25vw, 480px);
+        text-shadow: 2px 2px 0 rgba(255, 245, 202, 0.72);
+      }
+
+      .hello {
+        display: inline-block;
+        margin: 0 0 10px;
+        padding: 7px 12px 5px;
+        transform: rotate(-2deg);
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff8dd;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .info-zone h1 {
+        margin: 0;
+        max-width: 100%;
+        font-size: clamp(58px, 5vw, 82px);
+        font-weight: 700;
+        line-height: 0.92;
+        letter-spacing: -0.035em;
+      }
+
+      .identity-cards {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .name-cn,
+      .school {
+        display: inline-block;
+        margin: 0;
+        padding: 7px 11px 6px;
+        border: 3px solid var(--ink);
+        background: rgba(255, 245, 202, 0.9);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-size: 24px;
+        font-weight: 700;
+        text-shadow: none;
+      }
+
+      .email {
+        display: block;
+        width: max-content;
+        max-width: 100%;
+        margin-top: 13px;
+        padding: 8px 11px 7px;
+        border: 3px solid var(--ink);
+        background: rgba(255, 245, 202, 0.9);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-size: 18px;
+        line-height: 1.2;
+        text-shadow: none;
+        overflow-wrap: anywhere;
+      }
+
+      .pixel-sparkles {
+        margin-top: 20px;
+        color: var(--orange);
+        font-size: 27px;
+        letter-spacing: 0.3em;
+      }
+
+      .avatar-wrap {
+        position: absolute;
+        z-index: 3;
+        left: 67.5%;
+        bottom: 4.5%;
+        width: 520px;
+        transform: translateX(-50%);
+        filter: drop-shadow(8px 10px 0 rgba(74, 36, 29, 0.2));
+        animation: avatar-idle-bob 1.45s steps(4, end) infinite;
+        will-change: transform;
+      }
+
+      @keyframes avatar-idle-bob {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        25% { transform: translateX(-50%) translateY(-5px); }
+        50% { transform: translateX(-50%) translateY(-12px); }
+        75% { transform: translateX(-50%) translateY(-5px); }
+      }
+
+      .avatar-wrap img {
+        display: block;
+        width: 100%;
+        height: auto;
+        image-rendering: pixelated;
+      }
+
+      .avatar-fallback {
+        transition: opacity 120ms steps(2, end);
+      }
+
+      .avatar-motion {
+        position: absolute;
+        inset: 0;
+        aspect-ratio: 1230 / 1278;
+        opacity: 0;
+        background-image: url("motion/final/avatar-direction-atlas.webp");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 300% 300%;
+        image-rendering: pixelated;
+        transition: opacity 120ms steps(2, end);
+      }
+
+      .avatar-wrap.motion-ready .avatar-fallback { opacity: 0; }
+      .avatar-wrap.motion-ready .avatar-motion { opacity: 1; }
+
+      .entry {
+        position: absolute;
+        z-index: 6;
+        appearance: none;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+        font: inherit;
+        text-decoration: none;
+        transition: transform 150ms steps(2, end), filter 150ms steps(2, end);
+      }
+
+      .entry:hover,
+      .entry:focus-visible {
+        transform: translateY(-8px) scale(1.045) rotate(var(--rotation));
+        filter: brightness(1.08) saturate(1.08);
+        outline: none;
+      }
+
+      .entry img {
+        display: block;
+        width: 100%;
+        height: auto;
+        image-rendering: pixelated;
+        filter: drop-shadow(7px 8px 0 rgba(74, 36, 29, 0.2));
+      }
+
+      .entry-label {
+        display: inline-block;
+        margin-top: -8px;
+        padding: 5px 13px 3px;
+        border: 3px solid var(--ink);
+        background: var(--cream);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: lowercase;
+      }
+
+      .resume {
+        --rotation: -3deg;
+        left: clamp(480px, 36vw, 820px);
+        top: 4%;
+        width: 245px;
+        transform: rotate(var(--rotation));
+      }
+
+      .portfolio {
+        --rotation: 2deg;
+        left: clamp(430px, 32vw, 720px);
+        bottom: 3.5%;
+        width: 325px;
+        transform: rotate(var(--rotation));
+      }
+
+      .experience {
+        --rotation: -1deg;
+        right: 2.5%;
+        bottom: 7%;
+        width: 285px;
+        transform: rotate(var(--rotation));
+      }
+
+      .demo-entry {
+        --rotation: 1.5deg;
+        top: 2%;
+        right: 6.5%;
+        width: clamp(270px, 22vw, 340px);
+        transform: rotate(var(--rotation));
+      }
+
+      .demo-entry img {
+        filter: drop-shadow(7px 9px 0 rgba(74, 36, 29, 0.18));
+      }
+
+      .resume .entry-label { margin-top: -22px; }
+      .portfolio .entry-label { margin-top: -34px; }
+      .experience .entry-label { margin-top: -14px; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .entry { transition: none; }
+        .avatar-wrap { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="desktop-frame" aria-label="King Artball 个人网站首页">
+      <section class="info-zone" aria-label="个人信息">
+        <p class="hello">HELLO! I'M</p>
+        <h1>King<br />Artball</h1>
+        <div class="identity-cards">
+          <p class="name-cn">王艺璇</p>
+          <p class="school">中山大学</p>
+        </div>
+        <span class="email">wangyixuan_0826@163.com</span>
+        <div class="pixel-sparkles" aria-hidden="true">✦ ✦ ✦</div>
+      </section>
+
+      <a class="entry resume" href="resume/" aria-label="打开简历">
+        <img src="assets/resume-folder.png" alt="" />
+        <span class="entry-label">resume</span>
+      </a>
+
+      <a class="entry portfolio" href="portfolio/index.html" aria-label="打开作品集">
+        <img src="assets/portfolio-laptop.png" alt="" />
+        <span class="entry-label">portfolio</span>
+      </a>
+
+      <div class="avatar-wrap">
+        <img class="avatar-fallback" src="motion/final/avatar-static.png" alt="King Artball 的像素角色" />
+        <div class="avatar-motion" aria-hidden="true"></div>
+      </div>
+
+      <a class="entry demo-entry" href="demo/" aria-label="打开 Demo 展示页">
+        <img src="assets/demo-thought-bubble-v1.png" alt="demo" />
+      </a>
+
+      <a class="entry experience" href="experience/" aria-label="打开个人经历">
+        <img src="assets/experience-house-balanced-v3.png" alt="" />
+        <span class="entry-label">experience</span>
+      </a>
+    </main>
+    <script src="motion/final/avatar-pointer-motion.js" defer></script>
+  </body>
+</html>

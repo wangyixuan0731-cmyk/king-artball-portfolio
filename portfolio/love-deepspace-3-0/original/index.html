@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noimageindex" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>监控报告原文预览 · King Artball</title>
+    <style>
+      @font-face {
+        font-family: "Pixelify Sans";
+        src: url("../../../../assets/PixelifySans.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 400 700;
+      }
+
+      :root {
+        --ink: #4a241d;
+        --paper: #fffaf0;
+        --cream: #fff2bd;
+        --orange: #ff7427;
+        --coral: #ff7165;
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        min-width: 980px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 980px;
+        margin: 0;
+        overflow-x: hidden;
+        color: var(--ink);
+        background: #ffd34e;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(rgba(255, 232, 148, 0.88), rgba(255, 198, 79, 0.84)),
+          url("../../../../assets/pixel-woodland-background-v2.png") center / cover no-repeat;
+      }
+
+      .progress {
+        position: fixed;
+        z-index: 40;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 7px;
+        background: var(--orange);
+        box-shadow: 0 2px 0 var(--ink);
+      }
+
+      .topbar {
+        position: sticky;
+        z-index: 30;
+        top: 0;
+        display: flex;
+        min-width: 980px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 48px 16px;
+        border-bottom: 4px solid var(--ink);
+        background: rgba(255, 242, 189, 0.97);
+        box-shadow: 0 6px 0 rgba(74, 36, 29, 0.18);
+      }
+
+      .nav-links { display: flex; gap: 12px; }
+
+      .pixel-button {
+        display: inline-block;
+        padding: 9px 15px 7px;
+        border: 3px solid var(--ink);
+        background: var(--paper);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-family: "Pixelify Sans", "PingFang SC", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        transition: transform 120ms steps(2, end), filter 120ms steps(2, end);
+      }
+
+      .pixel-button:first-child {
+        background: var(--orange);
+        color: #fff9df;
+      }
+
+      .pixel-button:hover,
+      .pixel-button:focus-visible {
+        transform: translate(-2px, -2px);
+        filter: brightness(1.05) saturate(1.08);
+        outline: none;
+      }
+
+      .topbar-note {
+        margin: 0;
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      main {
+        width: min(1060px, calc(100vw - 96px));
+        margin: 56px auto 90px;
+      }
+
+      .viewer-heading {
+        margin-bottom: 38px;
+        padding: 28px 34px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 250, 229, 0.97);
+        box-shadow: 9px 9px 0 var(--ink);
+      }
+
+      .viewer-heading p {
+        margin: 0 0 8px;
+        color: #8f3f2c;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.45;
+      }
+
+      .viewer-heading small {
+        display: block;
+        margin-top: 10px;
+        color: #704033;
+        font-size: 14px;
+      }
+
+      .pages {
+        display: grid;
+        gap: 42px;
+      }
+
+      figure {
+        position: relative;
+        margin: 0;
+        padding: 22px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 242, 189, 0.96);
+        box-shadow: 10px 11px 0 var(--ink);
+      }
+
+      .page-number {
+        position: absolute;
+        z-index: 2;
+        top: -20px;
+        left: 26px;
+        min-width: 76px;
+        padding: 7px 13px 5px;
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff9df;
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 3px solid var(--ink);
+        background: #fff;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .pixel-button { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+    <nav class="topbar" aria-label="原文预览导航">
+      <div class="nav-links">
+        <a class="pixel-button" href="../">返回报告</a>
+        <a class="pixel-button" href="../../">portfolio</a>
+      </div>
+      <p class="topbar-note">ORIGINAL REPORT · 11 PAGES</p>
+    </nav>
+
+    <main>
+      <header class="viewer-heading">
+        <p>ORIGINAL DOCUMENT PREVIEW</p>
+        <h1>《恋与深空》祁煜日卡3.0版本监控报告</h1>
+        <small>逐页图片预览 · 原始 DOCX 与 PDF 未上传</small>
+      </header>
+
+      <section class="pages" aria-label="监控报告原文逐页预览">
+        <figure id="page-01"><span class="page-number">01 / 11</span><img src="assets/page-01.webp" alt="监控报告原文第1页" width="1323" height="1872" /></figure>
+        <figure><span class="page-number">02 / 11</span><img src="assets/page-02.webp" alt="监控报告原文第2页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure><span class="page-number">03 / 11</span><img src="assets/page-03.webp" alt="监控报告原文第3页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure><span class="page-number">04 / 11</span><img src="assets/page-04.webp" alt="监控报告原文第4页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure><span class="page-number">05 / 11</span><img src="assets/page-05.webp" alt="监控报告原文第5页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure><span class="page-number">06 / 11</span><img src="assets/page-06.webp" alt="监控报告原文第6页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure><span class="page-number">07 / 11</span><img src="assets/page-07.webp" alt="监控报告原文第7页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure><span class="page-number">08 / 11</span><img src="assets/page-08.webp" alt="监控报告原文第8页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure><span class="page-number">09 / 11</span><img src="assets/page-09.webp" alt="监控报告原文第9页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure><span class="page-number">10 / 11</span><img src="assets/page-10.webp" alt="监控报告原文第10页" width="1323" height="1872" loading="lazy" /></figure>
+        <figure id="page-11"><span class="page-number">11 / 11</span><img src="assets/page-11.webp" alt="监控报告原文第11页" width="1323" height="1872" loading="lazy" /></figure>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const progress = document.querySelector(".progress");
+        const update = () => {
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          progress.style.width = `${max > 0 ? Math.min(1, window.scrollY / max) * 100 : 0}%`;
+        };
+        update();
+        window.addEventListener("scroll", update, { passive: true });
+        window.addEventListener("resize", update);
+        document.addEventListener("contextmenu", (event) => {
+          if (event.target instanceof HTMLImageElement) event.preventDefault();
+        });
+        document.addEventListener("dragstart", (event) => {
+          if (event.target instanceof HTMLImageElement) event.preventDefault();
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="_blank"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>分页礼包方案完整功能文档</title>
+	<meta name="generator" content="LibreOfficeDev 26.8.0.0.alpha0 (MacOSX)"/>
+	<meta name="author" content="Apache POI"/>
+	<meta name="created" content="2026-10-06T07:04:24"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin-left: 2.54cm; margin-right: 2.54cm; margin-top: 1.27cm; margin-bottom: 1.27cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+		a:link { color: #000080; text-decoration: underline }
+
+		html { background: #f6f2e8; }
+		body {
+			width: min(760px, calc(100% - 38px));
+			margin: 0 auto;
+			padding: 28px 19px 90px;
+			background: #fff;
+			color: #1f1f1f;
+			font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+			overflow-wrap: anywhere;
+		}
+		font[face="等线"] {
+			font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
+		}
+		img { max-width: 100%; height: auto; }
+		table { max-width: 100%; border-collapse: collapse; }
+		td { overflow-wrap: anywhere; }
+		a { color: #245fcb; }
+		div[title="header"] { pointer-events: none; }
+	</style>
+</head>
+<body lang="zh-CN" link="#000080" vlink="#800000" dir="ltr">
+<div title="header"><p style="line-height: 100%; margin-bottom: 1.17cm">
+	<span class="sd-abs-pos" style="position: absolute; top: 1.91cm; left: 0.66cm; width: 552px"><img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_9875da77.gif" name="Shape1" alt="Shape1" align="left" width="552" height="930"/>
+</span><br/>
+
+	</p>
+</div><p style="line-height: 120%; margin-top: 0.85cm; margin-bottom: 0.85cm">
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="6" style="font-size: 26pt"><b>PJF-</b></font></font></span></font></font><font face="等线"><font size="6" style="font-size: 26pt"><b>分页礼包</b></font></font></p>
+<table width="444" cellpadding="2" cellspacing="0">
+	<col width="95"/>
+	<col width="96"/>
+	<col width="239"/>
+	<tr valign="top">
+		<td width="95" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">时间</font></font></p>
+		</td>
+		<td width="96" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">修订人</font></font></p>
+		</td>
+		<td width="239" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">修订内容</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2026/8/19</font></font></span></font></font></p>
+		</td>
+		<td width="96" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="2" style="font-size: 11pt">@</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">王艺璇</font></font></font></p>
+		</td>
+		<td width="239" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">建档</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2026/9/9</font></font></span></font></font></p>
+		</td>
+		<td width="96" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="2" style="font-size: 11pt">@</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">王艺璇</font></font></font></p>
+		</td>
+		<td width="239" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">增加</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1.3</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">包装方向</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_0"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="5" style="font-size: 18pt">1.
+</font></font></font></span></font></font><font face="等线"><font size="5" style="font-size: 18pt"><b>基本信息</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_1"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">1.1
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>背景概述</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">活动时间：</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2026</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">年</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">10</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">月</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">22</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">日随</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1.4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">版本上线，开放周期跨</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1.4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">上、下半版本。</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">采用</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个顺序解锁页签、每页</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个奖励位和单次直购机制；玩家全部完成共付费</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">57</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元，可获得</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">12</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">张限时限定券、</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">次常驻抽及其他养成材料奖励。</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">核心机制：每页仅包含</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个付费节点，其余为免费节点。第一页位置</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">在进入活动时即可领取；当前页付费成功后，其余免费节点依次解锁，领取完当前页所有奖励后解锁下一页签。</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">分页礼包包含</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">档礼包：</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">分别为</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">3</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元、</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元、</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">18</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元、</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">30</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元。具体奖励见</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><a href="https://baioo.feishu.cn/wiki/HEn2woaiTi5Kpik5xkPcoY3DnDg#share-IvzNduY8eol1ChxUO1zc32P5nTf"><font color="#3370ff"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2.3.1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">付费档位</font></font></font></a></p></li>
+</ol>
+<table width="552" cellpadding="2" cellspacing="0">
+	<col width="545"/>
+	<tr>
+		<td width="545" valign="top" style="border-top: none; border-bottom: none; border-left: 2.25pt solid #bbbfc4; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.21cm; padding-right: 0cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font color="#646a73"><font face="等线"><font size="2" style="font-size: 11pt">附：竞品游戏档位参考</font></font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="551" cellpadding="2" cellspacing="0">
+	<col width="118"/>
+	<col width="50"/>
+	<col width="142"/>
+	<col width="89"/>
+	<col width="130"/>
+	<tr valign="top">
+		<td width="118" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<br/>
+
+			</p>
+		</td>
+		<td colspan="2" width="196" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">重返未来</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1999</font></font></span></font></font></p>
+		</td>
+		<td colspan="2" width="223" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">恋与深空</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="118" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">时间</font></font></p>
+		</td>
+		<td colspan="2" width="196" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">21</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">天</font></font></p>
+		</td>
+		<td colspan="2" width="223" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">14</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">天</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="118" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">档</font></font></p>
+		</td>
+		<td width="50" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+		<td width="142" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">普抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">养成材料（</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">r</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">级）</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*3</font></font></span></font></font></p>
+		</td>
+		<td width="89" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">3</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+		<td width="130" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*2</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">二级货币</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*30000</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">养成材料</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*55</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="118" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">档</font></font></p>
+		</td>
+		<td width="50" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">18</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+		<td width="142" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*3</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">普抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">养成材料（</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">sr</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">级）</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*2</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">体力道具</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+		</td>
+		<td width="89" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+		<td width="130" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*3</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">普抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">养成材料</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*60</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">体力</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*100</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">二级货币</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*60000</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="118" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">3</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">档</font></font></p>
+		</td>
+		<td width="50" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">30</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+		<td width="142" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*4</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">普抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*2</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">养成材料（</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">ssr</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">级）</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*4</font></font></span></font></font></p>
+		</td>
+		<td width="89" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">18</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+		<td width="130" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*6</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">普抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">养成材料</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*210</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">体力</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*150</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">二级货币</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*60000</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="118" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">档</font></font></p>
+		</td>
+		<td width="50" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<br/>
+
+			</p>
+		</td>
+		<td width="142" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<br/>
+
+			</p>
+		</td>
+		<td width="89" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">30</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+		<td width="130" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*7</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">普抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">养成材料</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*310</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">二级货币</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*100000</font></font></span></font></font></p>
+			<p align="center" style="margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">觉醒材料</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="118" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">均价（限时抽）</font></font></p>
+		</td>
+		<td width="50" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<br/>
+
+			</p>
+		</td>
+		<td width="142" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">4.5</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+		<td width="89" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<br/>
+
+			</p>
+		</td>
+		<td width="130" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">3.2</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_2"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">1.2
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>功能流程</b></font></font></p>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_12f58706.jpg" name="Drawing 0" align="bottom" width="552" height="391" border="0"/>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_3"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">1.3
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>包装方向</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">礼包名称：好礼纷呈</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">宣传文案：解锁当前超值礼包，即可领取多重好礼！</font></font></p></li>
+</ol>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_4"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="5" style="font-size: 18pt">2.
+</font></font></font></span></font></font><font face="等线"><font size="5" style="font-size: 18pt"><b>功能逻辑</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_5"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">2.1
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>开闭逻辑</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">通过活动配置表控制活动开闭时间，到配置的结束时间后活动关闭</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">通过活动配置表控制开启等级（</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">5</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">级解锁，与活动、商店保持一致）</font></font></p></li>
+</ol>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_6"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">2.2
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>显示逻辑</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">活动开启后，主界面左上角显示活动按钮</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">常驻一个较弱动效吸引人点击</font></font></p></li>
+</ol>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm; margin-left: 0.8cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_f3b238d4.png" name="Drawing 1" align="bottom" width="85" height="66" border="0"/>
+</p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">有奖励未领取时显示红点</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">点击打开分页礼包活动页签</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">活动</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">-</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">限时页签入口</font></font></p></li>
+</ol>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_9c9ee9d5.png" name="Drawing 2" align="bottom" width="552" height="242" border="0"/>
+</p>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_1fff12c6.png" name="Drawing 3" align="bottom" width="552" height="242" border="0"/>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_7"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">2.3
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>活动逻辑</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_8"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 15pt">2.3.1
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 15pt"><b>礼包构成</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">分页礼包由</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个页签组成，每个页签包含</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个礼包，</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个礼包中，包含</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个付费礼包，</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">5</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个免费礼包，一共</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">24</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个礼包</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">购买当前页签的礼包，可解锁下一位置礼包；领取当前页所有礼包，可解锁下一页签。</font></font></p></li>
+</ol>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_9"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 15pt">2.3.2
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 15pt"><b>付费档位</b></font></font></p>
+<table width="551" cellpadding="2" cellspacing="0">
+	<col width="24"/>
+	<col width="48"/>
+	<col width="71"/>
+	<col width="51"/>
+	<col width="70"/>
+	<col width="48"/>
+	<col width="80"/>
+	<col width="49"/>
+	<col width="72"/>
+	<tr valign="top">
+		<td width="24" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">位置</font></font></p>
+		</td>
+		<td colspan="2" width="123" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">第一页</font></font></p>
+		</td>
+		<td colspan="2" width="125" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">第二页</font></font></p>
+		</td>
+		<td colspan="2" width="132" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">第三页</font></font></p>
+		</td>
+		<td colspan="2" width="125" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">第四页</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="24" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<br/>
+
+			</p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">价格（元）</font></font></p>
+		</td>
+		<td width="71" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">奖励</font></font></p>
+		</td>
+		<td width="51" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">价格（元）</font></font></p>
+		</td>
+		<td width="70" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">奖励</font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">价格（元）</font></font></p>
+		</td>
+		<td width="80" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">奖励</font></font></p>
+		</td>
+		<td width="49" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">价格（元）</font></font></p>
+		</td>
+		<td width="72" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">奖励</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="24" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="71" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">激情</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*30</font></font></span></font></font></p>
+		</td>
+		<td width="51" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font></p>
+		</td>
+		<td width="70" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时限定券</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*2</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">18</font></font></span></font></font></p>
+		</td>
+		<td width="80" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时限定券</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*4</font></font></span></font></font></p>
+		</td>
+		<td width="49" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">30</font></font></span></font></font></p>
+		</td>
+		<td width="72" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时限定券</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*5</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="24" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">3</font></font></span></font></font></p>
+		</td>
+		<td width="71" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">限时限定券</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+		</td>
+		<td width="51" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="70" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">激情</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*60</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="80" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">激情</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*100</font></font></span></font></font></p>
+		</td>
+		<td width="49" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="72" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">激情</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*150</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="24" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">3</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="71" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">初级欲望特调</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*10</font></font></span></font></font></p>
+		</td>
+		<td width="51" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="70" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">初级欲望特调</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*20</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="80" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">启明币</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*30000</font></font></span></font></font></p>
+		</td>
+		<td width="49" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="72" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">启明币</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*50000</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="24" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">4</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="71" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">初级结晶自选</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*10</font></font></span></font></font></p>
+		</td>
+		<td width="51" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="70" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">初级结晶自选</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*20</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="80" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">中级欲望特调</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*20</font></font></span></font></font></p>
+		</td>
+		<td width="49" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="72" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">中级结晶自选</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*20</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="24" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">5</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="71" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">据点加速券</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*5</font></font></span></font></font></p>
+		</td>
+		<td width="51" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="70" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">常驻抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="80" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">常驻抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+		</td>
+		<td width="49" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="72" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">常驻抽</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*2</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="24" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="71" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">启明币</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*10000</font></font></span></font></font></p>
+		</td>
+		<td width="51" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="70" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">启明币</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*20000</font></font></span></font></font></p>
+		</td>
+		<td width="48" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="80" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">西西莉亚的垂青</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*10</font></font></span></font></font></p>
+		</td>
+		<td width="49" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">免费</font></font></p>
+		</td>
+		<td width="72" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">重构之扉</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">*1</font></font></span></font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_10"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 15pt">2.3.3
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 15pt"><b>领取逻辑</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">每一页的</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个礼包有固定顺序，领取上一礼包后，下一礼包才显示可领取状态</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">购买当前页付费礼包后，可直接按照礼包位置领取所有礼包，无时间、天数限制</font></font></p></li>
+</ol>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_11"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 15pt">2.3.4
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 15pt"><b>解锁条件</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">页签解锁条件</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">活动开启时默认解锁第一页。第</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">页位置</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">为初始免费节点，进入活动即可点击领取；</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">第</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2-4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">页每一页单独解锁，前一页的所有礼包都领取完才解锁下一页；</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">礼包解锁条件</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">每一页的</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">个礼包单独解锁，下一个礼包需要在领取上一个礼包后解锁。</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">购买并领取完当前页所有奖励后，自动刷新跳转至下一页，不可返回至上一页。</font></font></p></li>
+</ol>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_12"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 15pt">2.3.5
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 15pt"><b>奖励提示</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">有奖励可领取时，主界面活动入口和【活动】显示红点提示</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">分页礼包领取按钮分为</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">3</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">类</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">未解锁：显示上锁，点击显示道具详情</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">已解锁：显示解锁，点击即可领取或购买</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">已领取：奖励领取完后，奖励压黑并显示已领取</font></font></p></li>
+</ol>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_13"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 15pt">2.3.6
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 15pt"><b>奖励补发</b></font></font></p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">如购买礼包后，有奖励未领取，活动结束后通过邮件补发奖励，邮件有效期</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">7</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">天。第一页位置</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">免费奖励不补发。</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_14"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="5" style="font-size: 18pt">3.
+</font></font></font></span></font></font><font face="等线"><font size="5" style="font-size: 18pt"><b>功能配置</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_15"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">3.1
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>功能开启</b></font></font></p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">用于控制功能是否上线、开放周期及玩家开启条件。</font></font></p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">配置参考：</font></font></p>
+<table width="552" cellpadding="2" cellspacing="0">
+	<col width="113"/>
+	<col width="429"/>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font color="#245bdb"><span style="background: #f2f3f5"><font face="等线"><font size="2" style="font-size: 11pt"><b>配置项</b></font></font></span></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font color="#245bdb"><span style="background: #f2f3f5"><font face="等线"><font size="2" style="font-size: 11pt"><b>说明</b></font></font></span></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>活动
+			</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>ID</b></font></font></span></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">活动唯一</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">ID</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">，用于区分不同活动</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>是否开启</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">活动开关，可控制是否上线</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>活动时间</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">控制活动开始和结束时间</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>开启条件</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">控制活动的开启等级</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_16"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">3.2
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>礼包常量</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">用于控制分页礼包主体的相关参数</font></font></p></li>
+</ol>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">配置参考：</font></font></p>
+<table width="552" cellpadding="2" cellspacing="0">
+	<col width="113"/>
+	<col width="429"/>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font color="#245bdb"><span style="background: #f2f3f5"><font face="等线"><font size="2" style="font-size: 11pt"><b>配置项</b></font></font></span></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font color="#245bdb"><span style="background: #f2f3f5"><font face="等线"><font size="2" style="font-size: 11pt"><b>说明</b></font></font></span></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>活动
+			</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>ID
+			</b></font></font></span></font></font>
+			</p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">唯一</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">id</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">，用于关联当期分页礼包的全部配置</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>页面</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>id</b></font></font></span></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">用于区分礼包页面</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>规则说明</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">规则说明文本</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_17"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">3.3
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>阶梯奖励</b></font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">用于控制分页礼包奖励的相关参数</font></font></p></li>
+</ol>
+<table width="552" cellpadding="2" cellspacing="0">
+	<col width="113"/>
+	<col width="429"/>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font color="#245bdb"><span style="background: #f2f3f5"><font face="等线"><font size="2" style="font-size: 11pt"><b>配置项</b></font></font></span></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font color="#245bdb"><span style="background: #f2f3f5"><font face="等线"><font size="2" style="font-size: 11pt"><b>说明</b></font></font></span></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>活动
+			</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>ID
+			</b></font></font></span></font></font>
+			</p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">唯一</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">id</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">，用于区分不同活动</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>页面</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>id</b></font></font></span></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">用于区分礼包页面</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>解锁条件</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">前置商品购买完后才可解锁下一个商品</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>免费档奖励</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">控制当前页面免费档奖励</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>付费档奖励</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">控制当前页面付费档奖励</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_18"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">3.4
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>付费配置</b></font></font></p>
+<table width="552" cellpadding="2" cellspacing="0">
+	<col width="113"/>
+	<col width="429"/>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font color="#245bdb"><span style="background: #f2f3f5"><font face="等线"><font size="2" style="font-size: 11pt"><b>配置项</b></font></font></span></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font color="#245bdb"><span style="background: #f2f3f5"><font face="等线"><font size="2" style="font-size: 11pt"><b>说明</b></font></font></span></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>活动
+			</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>ID
+			</b></font></font></span></font></font>
+			</p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">唯一</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">id</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">，用于区分不同活动</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>页面</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>id</b></font></font></span></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">用于区分礼包页面（</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">3</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元档位、</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元档位、</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">18</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元档位、</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">30</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">元档位）</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>充值项</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">关联的充值项</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">id</font></font></span></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="113" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt"><b>道具奖励</b></font></font></p>
+		</td>
+		<td width="429" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">购买礼包后获取的当前位置道具奖励</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_19"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="5" style="font-size: 18pt">4.
+</font></font></font><font face="Arial, serif"><font size="5" style="font-size: 18pt"><b>UI</b></font></font></span></font></font><font face="等线"><font size="5" style="font-size: 18pt"><b>界面</b></font></font></p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">需要文案对功能界面、系统文本统一包装</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_20"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="4" style="font-size: 16pt"><b>UE</b></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>稿</b></font></font></p>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_fe2e85b4.jpg" name="Drawing 4" align="bottom" width="552" height="1183" border="0"/>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_21"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">4.1
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>活动入口</b></font></font></p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">单独设计一个礼包图标，点击图标直接进入活动页面，不与其他弹窗礼包共用入口。</font></font></p>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_849cd745.png" name="Drawing 5" align="bottom" width="552" height="242" border="0"/>
+</p>
+<table width="345" cellpadding="2" cellspacing="0">
+	<col width="95"/>
+	<col width="240"/>
+	<tr valign="top">
+		<td width="95" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">元件</font></font></p>
+		</td>
+		<td width="240" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">说明</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_3764f161.png" name="Drawing 6" align="bottom" width="67" height="58" border="0"/>
+</p>
+			<p style="text-align: start; margin-top: 0.21cm"><br/>
+
+			</p>
+		</td>
+		<td width="240" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm">
+			<ol><li><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+				<font face="等线"><font size="2" style="font-size: 11pt">常驻一个较弱动效吸引人点击</font></font></p></li>
+			</ol>
+			<p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm; margin-left: 0.8cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_3764f161.png" name="Drawing 7" align="bottom" width="67" height="58" border="0"/>
+</p>
+			<ol>
+				<li><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+				<font face="等线"><font size="2" style="font-size: 11pt">有奖励未领取时显示红点</font></font></p></li>
+			</ol>
+			<ol>
+				<li><p style="text-align: start; margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">点击打开分页礼包活动页签</font></font></p></li>
+			</ol>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_22"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">4.2
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>活动界面</b></font></font></p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">付费奖励位置：第</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">页位于位置</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">，第</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">2-4</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">页位于位置</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">，使用红色底</font></font></p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>UI</b></font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt"><b>稿中有位置</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>5</b></font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt"><b>也为红色底的示意图，需要底的图标做成可配置，策划配置红底</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>/</b></font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt"><b>普通底</b></font></font></p>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_5c57ee83.jpg" name="Drawing 8" align="bottom" width="552" height="546" border="0"/>
+</p>
+<table width="552" cellpadding="2" cellspacing="0">
+	<col width="224"/>
+	<col width="318"/>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">元件</font></font></p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">说明</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_51773583.png" name="Drawing 9" align="bottom" width="213" height="83" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">活动名称文本</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_8da477b2.png" name="Drawing 10" align="bottom" width="213" height="62" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">倒计时文本</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm"><br/>
+
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_6fa2223a.png" name="Drawing 11" align="bottom" width="113" height="114" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">奖励放置位置</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<br/>
+<br/>
+
+			</p>
+			<p style="text-align: start; margin-top: 0.21cm"><br/>
+
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_683388d6.png" name="Drawing 12" align="bottom" width="213" height="130" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">活动入口按钮</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">需要活动名称文本</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm"><br/>
+
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_496592c3.png" name="Drawing 13" align="bottom" width="136" height="64" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">购买按钮（方案二）</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">付费奖励价格直接显示，点击即可购买，第一页中，免费奖励在此按钮上方，做发光动效显示，并保持解锁状态</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_4eceaa2a.png" name="Drawing 14" align="bottom" width="166" height="83" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">价格显示图标</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_23"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">4.3
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>弹窗</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="4" style="font-size: 16pt"><b>-</b></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>获得道具</b></font></font></p>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_1daf5ec8.png" name="Drawing 15" align="bottom" width="552" height="244" border="0"/>
+</p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">复用游戏内获得道具弹窗，点击任意位置关闭弹窗</font></font></p>
+<table width="552" cellpadding="2" cellspacing="0">
+	<col width="224"/>
+	<col width="318"/>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">元件</font></font></p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">说明</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_26964856.png" name="Drawing 16" align="bottom" width="140" height="80" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">获得物品提示</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_57d39410.png" name="Drawing 17" align="bottom" width="90" height="79" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">获得道具图标</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><a name="heading_24"></a>
+<font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font color="#3370ff"><font face="Arial, serif"><font size="4" style="font-size: 16pt">4.4
+</font></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>弹窗</b></font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="4" style="font-size: 16pt"><b>-</b></font></font></span></font></font><font face="等线"><font size="4" style="font-size: 16pt"><b>首页拍脸图</b></font></font></p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">首次必拍脸，每周拍脸一次，点击拍脸图直接跳转活动界面</font></font></p>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">拍脸图显示为当前购买进度页面</font></font></p></li>
+</ol>
+<ol>
+	<li><p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+	<font face="等线"><font size="2" style="font-size: 11pt">四页全部购买并领取完成后不再拍脸</font></font></p></li>
+</ol>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<font face="等线"><font size="2" style="font-size: 11pt">拍脸图设计与活动界面设计保持一致，此处以方案一为例</font></font></p>
+<p align="center" style="line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_1e3dc273.jpg" name="Drawing 18" align="bottom" width="552" height="239" border="0"/>
+</p>
+<table width="552" cellpadding="2" cellspacing="0">
+	<col width="224"/>
+	<col width="318"/>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">元件</font></font></p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">说明</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_51773583.png" name="Drawing 19" align="bottom" width="213" height="83" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">活动名称文本</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_8da477b2.png" name="Drawing 20" align="bottom" width="213" height="62" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">倒计时文本</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm"><br/>
+
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_6fa2223a.png" name="Drawing 21" align="bottom" width="113" height="114" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">奖励放置位置</font></font></p>
+			<ol>
+				<li><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+				<font face="等线"><font size="2" style="font-size: 11pt">位置</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">1</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">、位置</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><font face="Arial, serif"><font size="2" style="font-size: 11pt">6</font></font></span></font></font><font face="等线"><font size="2" style="font-size: 11pt">需做放大</font></font></p></li>
+			</ol>
+			<p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<br/>
+<br/>
+
+			</p>
+			<p style="text-align: start; margin-top: 0.21cm"><br/>
+
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_4eceaa2a.png" name="Drawing 22" align="bottom" width="166" height="83" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">价格显示图标</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_683388d6.png" name="Drawing 23" align="bottom" width="213" height="130" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">活动入口按钮</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm"><font face="等线"><font size="2" style="font-size: 11pt">需要活动名称文本</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="224" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p align="center" style="margin-top: 0.21cm">
+			<img src="PJF-%E5%88%86%E9%A1%B5%E7%A4%BC%E5%8C%85_html_8d10e88a.png" name="Drawing 24" align="bottom" width="106" height="79" border="0"/>
+</p>
+		</td>
+		<td width="318" style="border: 1px solid #dee0e3; padding-top: 0.11cm; padding-bottom: 0.05cm; padding-left: 0.21cm; padding-right: 0.21cm"><p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">关闭弹窗按钮</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm; margin-bottom: 0.21cm">
+			<font face="等线"><font size="2" style="font-size: 11pt">和其他拍脸图按钮保持一致</font></font></p>
+			<p style="text-align: start; margin-top: 0.21cm"><br/>
+
+			</p>
+		</td>
+	</tr>
+</table>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<br/>
+<br/>
+
+</p>
+<p style="text-align: start; line-height: 120%; margin-top: 0.21cm; margin-bottom: 0.21cm">
+<br/>
+<br/>
+
+</p>
+<div title="footer"><p style="line-height: 100%; margin-top: 1.17cm; margin-bottom: 0cm">
+	<br/>
+
+	</p>
+</div>
+</body>
+</html>

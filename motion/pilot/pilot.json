@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "type": "sprite-atlas",
+  "asset": "pilot.webp",
+  "frameCount": 2,
+  "columns": 2,
+  "rows": 1,
+  "cellWidth": 1230,
+  "cellHeight": 1278,
+  "atlasWidth": 2460,
+  "atlasHeight": 1278,
+  "quality": 88,
+  "lossless": true,
+  "files": [
+    "00-center.png",
+    "01-e.png"
+  ]
+}

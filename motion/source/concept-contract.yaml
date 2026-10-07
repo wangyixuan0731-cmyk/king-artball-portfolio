@@ -1,0 +1,19 @@
+subject_count: 1
+subjects:
+  - identity: "King Artball 的 Q 版粗颗粒像素女性角色；黑棕色中长披发、八字刘海、黑色圆框眼镜、白色吊带、黑色坎肩、水洗蓝牛仔裤、黑色板鞋"
+style: "Q版粗颗粒像素风，与当前首页静态角色完全一致"
+motion_intent: "角色身体和脚部保持固定，头部、面部朝向与视线跟随鼠标在九宫格方向内自然变化；快速反向时不闪烁、不抽动"
+background_owner: page
+scene: ""
+driver: pointer
+input_semantics: continuous
+time_control: scrub
+navigation: none
+clip_continuity: independent
+continuity:
+  - "人物身份、发型、眼镜、服装、配色、身体比例不变"
+  - "双脚底部锚点、人物整体尺寸和画布位置不变"
+  - "只允许头部、脸部、眼睛和少量发梢随朝向变化"
+  - "透明背景和像素颗粒大小不变"
+aspect_ratio: 1:1
+destination: "首页人物区域；桌面端；最大显示宽度 520 CSS px；透明叠加在像素树林背景上"

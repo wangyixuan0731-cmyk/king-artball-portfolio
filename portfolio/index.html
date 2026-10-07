@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noimageindex" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>Portfolio · King Artball</title>
+    <style>
+      @font-face {
+        font-family: "Pixelify Sans";
+        src: url("../assets/PixelifySans.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 400 700;
+      }
+
+      :root {
+        --ink: #4a241d;
+        --cream: #fff6ca;
+        --paper: #fffaf0;
+        --sun: #ffd34e;
+        --orange: #ff7427;
+        --coral: #ff7165;
+        --gold: #ffb62d;
+      }
+
+      * { box-sizing: border-box; }
+
+      html,
+      body {
+        min-width: 1180px;
+        min-height: 760px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--sun);
+      }
+
+      body {
+        color: var(--ink);
+        font-family: "Pixelify Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .portfolio-page {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        min-width: 1180px;
+        min-height: 760px;
+        overflow: hidden;
+        isolation: isolate;
+        background:
+          linear-gradient(rgba(255, 222, 112, 0.72), rgba(255, 191, 78, 0.62)),
+          url("../assets/pixel-woodland-background-v2.png") center / cover no-repeat;
+      }
+
+      .portfolio-page::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg, rgba(255, 249, 211, 0.24), transparent 42%, rgba(255, 116, 39, 0.06)),
+          rgba(255, 246, 202, 0.08);
+      }
+
+      .page-header {
+        position: absolute;
+        z-index: 10;
+        top: 34px;
+        left: 48px;
+        display: flex;
+        align-items: flex-start;
+        gap: 22px;
+      }
+
+      .home-link {
+        display: inline-block;
+        padding: 10px 18px 8px;
+        border: 4px solid var(--ink);
+        background: var(--orange);
+        box-shadow: 5px 5px 0 var(--ink);
+        color: #fff9df;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        transition: transform 120ms steps(2, end), filter 120ms steps(2, end);
+      }
+
+      .home-link:hover,
+      .home-link:focus-visible {
+        transform: translate(-2px, -3px);
+        filter: saturate(1.12) brightness(1.06);
+        outline: none;
+      }
+
+      .heading-group { margin-top: -3px; }
+
+      .kicker {
+        display: inline-block;
+        margin: 0 0 8px;
+        padding: 7px 12px 5px;
+        transform: rotate(-2deg);
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff8dd;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 58px;
+        line-height: 0.86;
+        letter-spacing: -0.035em;
+        text-shadow: 3px 3px 0 rgba(255, 246, 202, 0.82);
+      }
+
+      .page-note {
+        position: absolute;
+        z-index: 6;
+        top: 50px;
+        right: 52px;
+        margin: 0;
+        padding: 9px 14px 7px;
+        transform: rotate(1deg);
+        border: 3px solid var(--ink);
+        background: rgba(255, 246, 202, 0.94);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-size: 19px;
+        font-weight: 700;
+      }
+
+      .portfolio-map {
+        position: absolute;
+        z-index: 3;
+        inset: 144px 44px 32px;
+      }
+
+      .category {
+        position: absolute;
+        display: grid;
+        align-items: center;
+        gap: 22px;
+      }
+
+      .monitoring {
+        top: 0;
+        left: 0;
+        width: 610px;
+        grid-template-columns: minmax(330px, 1fr) 190px;
+      }
+
+      .research {
+        top: 0;
+        right: 0;
+        width: 610px;
+        grid-template-columns: 190px minmax(330px, 1fr);
+      }
+
+      .prd {
+        top: clamp(340px, 43vh, 385px);
+        left: 0;
+        width: 610px;
+        grid-template-columns: minmax(330px, 1fr) 190px;
+      }
+
+      .marketing {
+        top: clamp(340px, 43vh, 385px);
+        right: 0;
+        width: 610px;
+        grid-template-columns: 190px minmax(330px, 1fr);
+      }
+
+      .category-art {
+        --rotation: 0deg;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: start;
+        justify-content: center;
+        width: 190px;
+        color: var(--ink);
+        transition: transform 150ms steps(2, end), filter 150ms steps(2, end);
+        transform: rotate(var(--rotation));
+        transform-origin: 50% 76%;
+      }
+
+      .monitoring .category-art { --rotation: -2deg; }
+      .research .category-art { --rotation: 2deg; }
+      .prd .category-art { --rotation: -1deg; }
+      .marketing .category-art { --rotation: 1.5deg; }
+
+      .category-art:hover {
+        transform: translateY(-8px) scale(1.055) rotate(calc(var(--rotation) * -1));
+        filter: brightness(1.08) saturate(1.1);
+      }
+
+      .category-art img {
+        display: block;
+        width: 176px;
+        height: 176px;
+        object-fit: contain;
+        image-rendering: pixelated;
+        filter: drop-shadow(7px 8px 0 rgba(74, 36, 29, 0.2));
+      }
+
+      .category-label {
+        position: relative;
+        display: inline-block;
+        min-width: 142px;
+        margin-top: -12px;
+        padding: 7px 12px 6px;
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff9df;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .prd .category-label {
+        min-width: 102px;
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 26px;
+      }
+
+      .card-list {
+        display: grid;
+        gap: 10px;
+        align-content: center;
+      }
+
+      .work-card {
+        position: relative;
+        display: flex;
+        min-height: 52px;
+        align-items: center;
+        padding: 9px 15px 9px 44px;
+        border: 3px solid var(--ink);
+        background: rgba(255, 250, 229, 0.96);
+        box-shadow: 5px 5px 0 rgba(74, 36, 29, 0.9);
+        color: var(--ink);
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.35;
+        text-decoration: none;
+        transform: translateY(0) scale(1);
+        transform-origin: center;
+        transition:
+          transform 140ms steps(2, end),
+          background-color 140ms steps(2, end),
+          box-shadow 140ms steps(2, end),
+          filter 140ms steps(2, end);
+      }
+
+      .work-card:hover {
+        z-index: 2;
+        transform: translateY(-5px) scale(1.025);
+        background: rgba(255, 251, 219, 1);
+        box-shadow: 7px 9px 0 rgba(74, 36, 29, 0.94);
+        filter: brightness(1.04) saturate(1.08);
+      }
+
+      .work-card::before {
+        content: attr(data-index);
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        display: grid;
+        width: 24px;
+        height: 24px;
+        place-items: center;
+        transform: translateY(-50%);
+        border: 2px solid var(--ink);
+        background: var(--gold);
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 17px;
+        line-height: 1;
+      }
+
+      .monitoring .work-card:nth-child(2),
+      .marketing .work-card:nth-child(2),
+      .research .work-card:nth-child(even),
+      .prd .work-card:nth-child(even) {
+        background: rgba(255, 239, 176, 0.97);
+      }
+
+      .category .work-card:hover {
+        background: rgba(255, 251, 219, 1);
+      }
+
+      .work-link { cursor: pointer; }
+
+      .work-link:focus-visible {
+        z-index: 2;
+        transform: translateY(-5px) scale(1.025);
+        background: rgba(255, 251, 219, 1);
+        box-shadow: 7px 9px 0 rgba(74, 36, 29, 0.94);
+        outline: 4px solid #fff8dc;
+        outline-offset: 4px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .home-link,
+        .category-art,
+        .work-card { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="portfolio-page" aria-label="King Artball 作品集总览">
+      <header class="page-header">
+        <a class="home-link" href="../index.html">home</a>
+        <div class="heading-group">
+          <p class="kicker">MY WORK</p>
+          <h1>portfolio</h1>
+        </div>
+      </header>
+
+      <p class="page-note">choose a collection ✦</p>
+
+      <section class="portfolio-map" aria-label="作品集分类">
+        <section class="category monitoring" aria-labelledby="monitoring-title">
+          <div class="card-list" aria-label="竞品监控报告作品">
+            <a class="work-card work-link" data-index="01" href="love-deepspace-3-0/">恋与深空日卡3.0监控报告</a>
+            <a class="work-card work-link" data-index="02" href="./reverse-1999-atomic-heart/index.html">重返未来1999原子之心版本监控报告</a>
+          </div>
+          <div class="category-art">
+            <img src="assets/monitor-camera-v1.png" alt="Q版像素监控摄像头" />
+            <h2 class="category-label" id="monitoring-title">监控报告</h2>
+          </div>
+        </section>
+
+        <section class="category research" aria-labelledby="research-title">
+          <div class="category-art">
+            <img src="assets/magnifying-glass-v1.png" alt="Q版像素放大镜" />
+            <h2 class="category-label" id="research-title">竞品调研</h2>
+          </div>
+          <div class="card-list" aria-label="竞品调研作品">
+            <a class="work-card work-link" data-index="01" href="./arknights-endfield/index.html">明日方舟终末地产品复盘</a>
+            <a class="work-card work-link" data-index="02" href="./duet-night-abyss/index.html">二重螺旋商业化整理</a>
+          </div>
+        </section>
+
+        <section class="category prd" aria-labelledby="prd-title">
+          <div class="card-list" aria-label="策划方案作品">
+            <a class="work-card work-link" data-index="01" href="./furniture-gacha/index.html">家具奖池方案</a>
+            <a class="work-card work-link" data-index="02" href="./paged-gift/index.html">分页礼包方案</a>
+          </div>
+          <div class="category-art">
+            <img src="assets/light-bulb-v1.png" alt="Q版像素灯泡" />
+            <h2 class="category-label" id="prd-title">PRD</h2>
+          </div>
+        </section>
+
+        <section class="category marketing" aria-labelledby="marketing-title">
+          <div class="category-art">
+            <img src="assets/megaphone-v1.png" alt="Q版像素手持扩音器" />
+            <h2 class="category-label" id="marketing-title">营销传播</h2>
+          </div>
+          <div class="card-list" aria-label="营销传播作品">
+            <a class="work-card work-link" data-index="01" href="./strategy-guides/index.html">攻略</a>
+            <a class="work-card work-link" data-index="02" href="./sms-campaigns/index.html">营销短信文案</a>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+concept_contract: source/concept-contract.yaml
+identity_bible: ../../../motion/source/identity-bible.md
+parameter_space: discrete
+media_access: random
+gesture_policy:
+  unit: continuous
+  inertia: preserve
+  while_active: ignore
+  boundary: loop
+  programmatic_navigation: ignore
+storyboard:
+  - 完全藏在页面边缘外
+  - 快速探入页面并完整显示从头到鞋的全身
+  - 停留并轻微左右观察
+  - 回到边缘外
+keyframes:
+  - K0: bottom-left actor uses frame 0, star eyes looking upper-right
+  - K1: top-right actor uses frame 1, star eyes looking lower-left
+  - K2: both actors keep their assigned frame while the container peeks and tilts
+clip_chain: independent
+rest_state: off-edge
+loop: closed
+anchor: fixed-body
+scene_continuity: page background remains fixed
+frame_policy: native
+target_fps: 12
+quality_target: two-frame 2460x1278 transparent PNG atlas, each frame 1230x1278, maximum display 280x292 CSS px at DPR 2
+pixel_dimensions: 2460x1278
+reduced_motion: show both avatars in a quiet partially visible pose without autoplay

@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Experience · King Artball</title>
+    <style>
+      @font-face {
+        font-family: "Pixelify Sans";
+        src: url("../assets/PixelifySans.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 400 700;
+      }
+
+      :root {
+        --ink: #4a241d;
+        --cream: #fff6ca;
+        --paper: #fffaf0;
+        --sun: #ffd34e;
+        --orange: #ff7427;
+        --coral: #ff7165;
+        --soft-orange: #ffb13b;
+      }
+
+      * { box-sizing: border-box; }
+
+      html,
+      body {
+        min-width: 1180px;
+        min-height: 760px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--sun);
+      }
+
+      body {
+        color: var(--ink);
+        font-family: "Pixelify Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      button,
+      a { font: inherit; }
+
+      .experience-page {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        min-width: 1180px;
+        min-height: 760px;
+        overflow: hidden;
+        isolation: isolate;
+        background:
+          linear-gradient(rgba(255, 221, 96, 0.26), rgba(255, 167, 44, 0.12)),
+          url("../assets/pixel-woodland-background-v2.png") center / cover no-repeat;
+      }
+
+      .experience-page::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(255, 248, 206, 0.25), transparent 40%, rgba(255, 150, 35, 0.08));
+      }
+
+      .page-header {
+        position: absolute;
+        z-index: 8;
+        top: 44px;
+        left: 64px;
+        display: flex;
+        align-items: flex-start;
+        gap: 22px;
+      }
+
+      .home-link {
+        display: inline-block;
+        padding: 11px 19px 9px;
+        border: 4px solid var(--ink);
+        background: var(--orange);
+        box-shadow: 6px 6px 0 var(--ink);
+        color: #fff9df;
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        transition: transform 120ms steps(2, end), filter 120ms steps(2, end);
+      }
+
+      .home-link:hover,
+      .home-link:focus-visible {
+        transform: translate(-2px, -3px);
+        filter: saturate(1.12) brightness(1.06);
+        outline: none;
+      }
+
+      .heading-group { margin-top: -5px; }
+
+      .kicker {
+        display: inline-block;
+        margin: 0 0 9px;
+        padding: 8px 12px 6px;
+        transform: rotate(-2deg);
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff8dd;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 58px;
+        line-height: 0.9;
+        letter-spacing: -0.035em;
+        text-shadow: 3px 3px 0 rgba(255, 246, 202, 0.82);
+      }
+
+      .select-hint {
+        position: absolute;
+        z-index: 4;
+        top: 56px;
+        left: 50%;
+        margin: 0;
+        padding: 10px 15px 8px;
+        transform: translateX(-50%) rotate(1deg);
+        border: 3px solid var(--ink);
+        background: rgba(255, 246, 202, 0.92);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-size: 21px;
+        font-weight: 700;
+      }
+
+      .timeline {
+        position: absolute;
+        z-index: 6;
+        left: 10%;
+        right: 10%;
+        top: 57%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        transform: translateY(-50%);
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 139px;
+        left: 16.66%;
+        right: 16.66%;
+        height: 15px;
+        border: 4px solid var(--ink);
+        background: repeating-linear-gradient(90deg, var(--orange) 0 28px, var(--sun) 28px 50px);
+        box-shadow: 0 6px 0 rgba(74, 36, 29, 0.2);
+      }
+
+      .timeline-stop {
+        appearance: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+      }
+
+      .date {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 7px 12px 6px;
+        border: 3px solid var(--ink);
+        background: var(--cream);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .icon-card {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 196px;
+        height: 196px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 246, 202, 0.95);
+        box-shadow: 8px 8px 0 var(--ink);
+        transform: rotate(var(--tilt));
+        transition: transform 140ms steps(2, end), background 140ms steps(2, end);
+      }
+
+      .timeline-stop:nth-child(1) { --tilt: -2deg; }
+      .timeline-stop:nth-child(2) { --tilt: 1.5deg; }
+      .timeline-stop:nth-child(3) { --tilt: -1deg; }
+
+      .icon-card img {
+        display: block;
+        width: 172px;
+        height: 172px;
+        object-fit: contain;
+        image-rendering: pixelated;
+        pointer-events: none;
+      }
+
+      .timeline-stop:hover .icon-card,
+      .timeline-stop:focus-visible .icon-card,
+      .timeline-stop.is-active .icon-card {
+        transform: translateY(-9px) rotate(var(--tilt)) scale(1.055);
+        background: #fff4a7;
+      }
+
+      .timeline-stop:focus-visible { outline: none; }
+
+      .timeline-stop.is-active .icon-card::after {
+        content: "";
+        position: absolute;
+        inset: -12px;
+        border: 4px dashed var(--coral);
+        pointer-events: none;
+      }
+
+      .stop-title {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 9px 16px 7px;
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff9df;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .story-bubble {
+        position: absolute;
+        z-index: 12;
+        top: 132px;
+        left: 50%;
+        width: min(1020px, calc(100vw - 260px));
+        min-height: 340px;
+        max-height: 430px;
+        padding: 30px 35px 28px;
+        transform: translateX(-50%);
+        border: 5px solid var(--ink);
+        background: rgba(255, 250, 240, 0.98);
+        box-shadow: 11px 11px 0 var(--ink);
+      }
+
+      .story-bubble[hidden] { display: none; }
+
+      .story-bubble::after {
+        content: "";
+        position: absolute;
+        bottom: -21px;
+        left: var(--tail-left);
+        width: 34px;
+        height: 34px;
+        transform: translateX(-50%) rotate(45deg);
+        border-right: 5px solid var(--ink);
+        border-bottom: 5px solid var(--ink);
+        background: var(--paper);
+      }
+
+      .story-bubble[data-origin="microfilm"] {
+        --tail-left: 13%;
+        transform-origin: 13% 100%;
+      }
+
+      .story-bubble[data-origin="field"] {
+        --tail-left: 50%;
+        transform-origin: 50% 100%;
+      }
+
+      .story-bubble[data-origin="internship"] {
+        --tail-left: 87%;
+        transform-origin: 87% 100%;
+      }
+
+      .story-bubble.is-opening {
+        animation: bubble-pop 220ms steps(3, end) both;
+      }
+
+      @keyframes bubble-pop {
+        from { opacity: 0; transform: translateX(-50%) scale(0.82); }
+        to { opacity: 1; transform: translateX(-50%) scale(1); }
+      }
+
+      .bubble-close {
+        position: absolute;
+        top: 14px;
+        right: 15px;
+        appearance: none;
+        padding: 7px 11px 6px;
+        border: 3px solid var(--ink);
+        background: var(--orange);
+        box-shadow: 3px 3px 0 var(--ink);
+        color: #fff9df;
+        cursor: pointer;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .bubble-close:hover,
+      .bubble-close:focus-visible {
+        filter: brightness(1.08) saturate(1.08);
+        outline: none;
+      }
+
+      .story-panel[hidden] { display: none; }
+
+      .story-panel h2 {
+        margin: 0 54px 12px 0;
+        font-size: 36px;
+        line-height: 1;
+      }
+
+      .story-meta {
+        margin: 0 0 14px;
+        color: #a84422;
+        font-size: 19px;
+        font-weight: 700;
+      }
+
+      .story-copy {
+        margin: 0;
+        padding: 0 0 0 22px;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.58;
+      }
+
+      .story-copy li + li { margin-top: 7px; }
+      .story-copy strong { color: #83341f; }
+
+      .microfilm-layout {
+        display: grid;
+        grid-template-columns: 1fr 170px;
+        gap: 25px;
+        align-items: center;
+      }
+
+      .qr-link {
+        display: block;
+        padding: 9px;
+        border: 4px solid var(--ink);
+        background: #fff7c9;
+        box-shadow: 5px 5px 0 var(--ink);
+        color: var(--ink);
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .qr-link img {
+        display: block;
+        width: 146px;
+        height: 146px;
+        image-rendering: pixelated;
+        filter: sepia(1) saturate(4.8) hue-rotate(337deg) brightness(0.7) contrast(1.18);
+      }
+
+      .qr-link span {
+        display: block;
+        margin-top: 6px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .peek-actor {
+        position: absolute;
+        z-index: 3;
+        overflow: visible;
+        pointer-events: none;
+      }
+
+      .peek-actor .avatar-sprite {
+        position: absolute;
+        width: 280px;
+        height: 291px;
+        background-image: url("motion/final/avatar-peek-atlas-stars-v2.png");
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+        image-rendering: pixelated;
+        filter: drop-shadow(7px 8px 0 rgba(74, 36, 29, 0.18));
+        animation-play-state: paused;
+        animation-duration: var(--peek-duration, 0s);
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(8, end);
+        animation-fill-mode: backwards;
+      }
+
+      .peek-bottom-left {
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        height: 310px;
+      }
+
+      .peek-bottom-left .avatar-sprite {
+        left: 8px;
+        bottom: 4px;
+        background-position: var(--peek-left-position, 0% 0%);
+        animation-name: peek-left;
+        animation-delay: var(--peek-delay-left, 0s);
+      }
+
+      .peek-top-right {
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 310px;
+      }
+
+      .peek-top-right .avatar-sprite {
+        top: 5px;
+        right: 6px;
+        background-position: var(--peek-right-position, 100% 0%);
+        animation-name: peek-right;
+        animation-delay: var(--peek-delay-right, 0s);
+      }
+
+      .peek-motion-active .avatar-sprite { animation-play-state: running; }
+
+      @keyframes peek-left {
+        0%, 8%, 92%, 100% { transform: translate(-258px, 258px) rotate(-8deg); }
+        18%, 36% { transform: translate(4px, -4px) rotate(3deg); }
+        44% { transform: translate(0, -8px) rotate(-2deg); }
+        52% { transform: translate(4px, -4px) rotate(3deg); }
+        68%, 78% { transform: translate(-10px, 4px) rotate(-4deg); }
+      }
+
+      @keyframes peek-right {
+        0%, 8%, 92%, 100% { transform: translate(258px, -258px) rotate(8deg); }
+        18%, 36% { transform: translate(-4px, 4px) rotate(-3deg); }
+        44% { transform: translate(0, 8px) rotate(2deg); }
+        52% { transform: translate(-4px, 4px) rotate(-3deg); }
+        68%, 78% { transform: translate(10px, -4px) rotate(4deg); }
+      }
+
+      .peek-motion-reduced .peek-bottom-left .avatar-sprite,
+      .peek-motion-fallback .peek-bottom-left .avatar-sprite {
+        animation: none;
+        transform: translate(-10px, 4px) rotate(-4deg);
+      }
+
+      .peek-motion-reduced .peek-top-right .avatar-sprite,
+      .peek-motion-fallback .peek-top-right .avatar-sprite {
+        animation: none;
+        transform: translate(10px, -4px) rotate(4deg);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .home-link,
+        .icon-card { transition: none; }
+        .story-bubble.is-opening { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="experience-page" aria-label="King Artball 个人经历时间轴">
+      <header class="page-header">
+        <a class="home-link" href="../">home</a>
+        <div class="heading-group">
+          <p class="kicker">MY JOURNEY</p>
+          <h1>experience</h1>
+        </div>
+      </header>
+
+      <p class="select-hint">choose a stop ✦</p>
+
+      <div class="peek-actor peek-bottom-left" aria-hidden="true">
+        <div class="avatar-sprite"></div>
+      </div>
+      <div class="peek-actor peek-top-right" aria-hidden="true">
+        <div class="avatar-sprite"></div>
+      </div>
+
+      <section class="story-bubble" aria-live="polite" hidden>
+        <button class="bubble-close" type="button" aria-label="关闭经历详情">close</button>
+
+        <article class="story-panel" id="story-microfilm" hidden>
+          <div class="microfilm-layout">
+            <div>
+              <h2>Microfilm</h2>
+              <p class="story-meta">广州市越秀区博物馆微电影项目 · 剧情策划</p>
+              <ul class="story-copy">
+                <li><strong>内容策划：</strong>针对传统文化内容对年轻用户吸引力不足的问题，分析目标受众的内容偏好，提炼文物历史与角色特征，提出“文物 IP 拟人化＋梦境叙事”创意方向，并参与将核心卖点转化为剧情脚本及影像内容。</li>
+                <li><strong>传播互动设计：</strong>围绕内容上线规划“预热—发布—互动”传播链路，并设计文创周边激励及 UGC 互动机制，引导用户围绕角色与剧情进行评论及二次创作。</li>
+                <li><strong>项目成果：</strong>项目作品获评中山大学第十届网络媒体展示节二等奖。</li>
+              </ul>
+            </div>
+            <a class="qr-link" href="https://mp.weixin.qq.com/s/wl9BbHmMr-QMlctH0hHObA" target="_blank" rel="noopener noreferrer" aria-label="扫码或点击查看微电影项目">
+              <img src="assets/microfilm-qr.png" alt="微电影项目跳转二维码" />
+              <span>scan to watch</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="story-panel" id="story-field" hidden>
+          <h2>Field Research</h2>
+          <p class="story-meta">中山大学大学生创新训练计划 · 核心成员</p>
+          <ul class="story-copy">
+            <li><strong>项目名称：</strong>《农村移风易俗进程中的声望资本研究》，获评中山大学 2025 年大学生创新训练计划省级良好项目。</li>
+            <li><strong>用户调研：</strong>围绕农村节庆活动及参与主体开展实地调研，通过现场观察、访谈及资料整理收集一手信息。</li>
+            <li><strong>项目协作：</strong>与 5 名跨专业成员协同推进项目，参与调研框架讨论、任务拆分及外部资源沟通，对接村委会等机构获取调研支持。</li>
+          </ul>
+        </article>
+
+        <article class="story-panel" id="story-internship" hidden>
+          <h2>Internship</h2>
+          <p class="story-meta">广州百奥家庭互动有限公司《夜幕之下》· 运营策划</p>
+          <ul class="story-copy">
+            <li><strong>竞品分析：</strong>围绕游戏商业化玩法需求，拆解 13 款竞品的奖池结构、商品定价、保底机制及投放节奏，横向对比不同产品的付费设计与用户激励方式，形成分析结论并支持家具奖池及首充优化方案设计与落地。</li>
+            <li><strong>用户反馈分析：</strong>整理分析 2 个月内 4,000＋条玩家反馈，按 BUG、玩法、付费等维度完成问题归因，识别高频问题和核心用户诉求，输出优先级判断及优化建议。</li>
+            <li><strong>营销策划：</strong>围绕 4 位新角色上线，结合角色机制、用户关注点及版本卖点，协同社区、营销及策划团队产出角色攻略内容；累计发布 4 篇，单篇点赞均达 3,000＋。</li>
+            <li><strong>版本运营：</strong>参与 3 个大版本上线，负责活动配置、包体测试及上线验收；独立完成 3 期战令、2 期签到活动的方案设计与落地。</li>
+          </ul>
+        </article>
+      </section>
+
+      <nav class="timeline" aria-label="个人经历时间轴">
+        <button class="timeline-stop" type="button" data-story="microfilm" aria-expanded="false" aria-controls="story-microfilm">
+          <span class="date">2024.02—2024.05</span>
+          <span class="icon-card"><img src="assets/microfilm-clapperboard-q-pixel-v3.png" alt="" /></span>
+          <span class="stop-title">Microfilm</span>
+        </button>
+
+        <button class="timeline-stop" type="button" data-story="field" aria-expanded="false" aria-controls="story-field">
+          <span class="date">2024.09—2025.12</span>
+          <span class="icon-card"><img src="assets/field-research-briefcase-q-pixel-v3.png" alt="" /></span>
+          <span class="stop-title">Field Research</span>
+        </button>
+
+        <button class="timeline-stop" type="button" data-story="internship" aria-expanded="false" aria-controls="story-internship">
+          <span class="date">2026.07—2026.10</span>
+          <span class="icon-card"><img src="assets/internship-controller-q-pixel-v3.png" alt="" /></span>
+          <span class="stop-title">Internship</span>
+        </button>
+      </nav>
+    </main>
+    <script src="experience.js" defer></script>
+    <script src="motion/final/peek-motion.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "type": "sprite-atlas",
+  "asset": "avatar-direction-atlas.webp",
+  "frameCount": 9,
+  "columns": 3,
+  "rows": 3,
+  "cellWidth": 1230,
+  "cellHeight": 1278,
+  "atlasWidth": 3690,
+  "atlasHeight": 3834,
+  "quality": 88,
+  "lossless": true,
+  "files": [
+    "00-nw.png",
+    "01-n.png",
+    "02-ne.png",
+    "03-w.png",
+    "04-center.png",
+    "05-e.png",
+    "06-sw.png",
+    "07-s.png",
+    "08-se.png"
+  ]
+}

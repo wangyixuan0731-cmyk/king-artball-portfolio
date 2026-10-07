@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "type": "grid-2d",
+  "fps": 60,
+  "frameDuration": 0.0166666667,
+  "initialState": "center",
+  "grid": {
+    "columns": 3,
+    "rows": 3,
+    "xRange": [-1, 1],
+    "yRange": [-1, 1],
+    "threshold": 0.28
+  },
+  "states": [
+    { "id": "nw", "frame": 0, "column": 0, "row": 0 },
+    { "id": "n", "frame": 1, "column": 1, "row": 0 },
+    { "id": "ne", "frame": 2, "column": 2, "row": 0 },
+    { "id": "w", "frame": 3, "column": 0, "row": 1 },
+    { "id": "center", "frame": 4, "column": 1, "row": 1 },
+    { "id": "e", "frame": 5, "column": 2, "row": 1 },
+    { "id": "sw", "frame": 6, "column": 0, "row": 2 },
+    { "id": "s", "frame": 7, "column": 1, "row": 2 },
+    { "id": "se", "frame": 8, "column": 2, "row": 2 }
+  ],
+  "segments": []
+}

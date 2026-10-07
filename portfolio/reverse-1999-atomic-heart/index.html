@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noimageindex" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%23ffd34e'/%3E%3Cpath d='M5 9h22v14H5z' fill='%23ff7427' stroke='%234a241d' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23fff6ca' stroke='%234a241d' stroke-width='3'/%3E%3C/svg%3E" />
+    <title>《重返未来：1999》×原子之心联动版本监控报告 · King Artball</title>
+    <style>
+      @font-face {
+        font-family: "Pixelify Sans";
+        src: url("../../assets/PixelifySans.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 400 700;
+      }
+
+      :root {
+        --ink: #4a241d;
+        --ink-soft: #704033;
+        --paper: #fffaf0;
+        --cream: #fff2bd;
+        --sun: #ffd34e;
+        --orange: #ff7427;
+        --coral: #ff7165;
+        --gold: #ffb62d;
+        --blue: #77cadd;
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        min-width: 1100px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 1100px;
+        margin: 0;
+        overflow-x: hidden;
+        color: var(--ink);
+        background: var(--sun);
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      body.modal-open { overflow: hidden; }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(rgba(255, 232, 148, 0.84), rgba(255, 198, 79, 0.8)),
+          url("../../assets/pixel-woodland-background-v2.png") center / cover no-repeat;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg, rgba(255, 250, 224, 0.22), transparent 32%, rgba(255, 116, 39, 0.08)),
+          rgba(255, 246, 202, 0.12);
+      }
+
+      a { color: inherit; }
+      button { color: inherit; }
+
+      .scroll-progress {
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 7px;
+        background: var(--orange);
+        box-shadow: 0 2px 0 var(--ink);
+      }
+
+      .topbar {
+        position: sticky;
+        z-index: 20;
+        top: 0;
+        display: flex;
+        min-width: 1100px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 19px 48px 16px;
+        border-bottom: 4px solid var(--ink);
+        background: rgba(255, 242, 189, 0.96);
+        box-shadow: 0 6px 0 rgba(74, 36, 29, 0.18);
+        backdrop-filter: blur(5px);
+      }
+
+      .topbar-links {
+        display: flex;
+        gap: 12px;
+      }
+
+      .pixel-button,
+      .action-button {
+        display: inline-block;
+        padding: 9px 15px 7px;
+        border: 3px solid var(--ink);
+        background: var(--paper);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-family: "Pixelify Sans", "PingFang SC", sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        transition: transform 120ms steps(2, end), filter 120ms steps(2, end);
+      }
+
+      .pixel-button:first-child,
+      .action-button.primary {
+        background: var(--orange);
+        color: #fff9df;
+      }
+
+      .pixel-button:hover,
+      .pixel-button:focus-visible,
+      .action-button:hover,
+      .action-button:focus-visible {
+        transform: translate(-2px, -3px);
+        filter: brightness(1.05) saturate(1.08);
+        outline: none;
+      }
+
+      .topbar-label {
+        margin: 0;
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .report-shell {
+        width: min(1160px, calc(100vw - 96px));
+        margin: 54px auto 88px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(310px, 0.7fr);
+        gap: 44px;
+        padding: 52px 56px 48px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 250, 229, 0.97);
+        box-shadow: 10px 11px 0 var(--ink);
+      }
+
+      .eyebrow,
+      .section-tag,
+      .summary-label {
+        display: inline-block;
+        margin: 0;
+        border: 3px solid var(--ink);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-family: "Pixelify Sans", "PingFang SC", sans-serif;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .eyebrow {
+        padding: 8px 13px 6px;
+        transform: rotate(-1.5deg);
+        background: var(--coral);
+        color: #fff8dc;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 25px 0 20px;
+        font-size: 46px;
+        line-height: 1.26;
+        letter-spacing: -0.035em;
+      }
+
+      .hero-quote {
+        max-width: 690px;
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1.7;
+      }
+
+      .hero-meta {
+        display: grid;
+        align-content: center;
+        gap: 16px;
+      }
+
+      .meta-row {
+        padding: 14px 16px 13px;
+        border: 3px solid var(--ink);
+        background: var(--cream);
+        box-shadow: 5px 5px 0 rgba(74, 36, 29, 0.72);
+      }
+
+      .meta-row:nth-child(even) { background: #ffe29a; }
+
+      .meta-label {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--ink-soft);
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .meta-value {
+        display: block;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .executive-summary {
+        margin: 48px 0 0;
+        padding: 34px 40px 32px;
+        border: 4px solid var(--ink);
+        background: rgba(255, 236, 160, 0.96);
+        box-shadow: 8px 8px 0 var(--ink);
+      }
+
+      .summary-label {
+        padding: 7px 11px 5px;
+        background: var(--orange);
+        color: #fff9df;
+        font-size: 18px;
+      }
+
+      .executive-summary p {
+        margin: 22px 0 0;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.85;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin: 34px 0 0;
+      }
+
+      .metric {
+        min-height: 145px;
+        padding: 22px 20px 18px;
+        border: 4px solid var(--ink);
+        background: rgba(255, 250, 229, 0.97);
+        box-shadow: 6px 7px 0 rgba(74, 36, 29, 0.82);
+      }
+
+      .metric:nth-child(2),
+      .metric:nth-child(4) { background: rgba(255, 229, 139, 0.98); }
+
+      .metric strong {
+        display: block;
+        margin-bottom: 9px;
+        color: var(--orange);
+        font-family: "Pixelify Sans", "PingFang SC", sans-serif;
+        font-size: 35px;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.55;
+      }
+
+      .chapter {
+        margin-top: 70px;
+        padding: 46px 50px 50px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 250, 229, 0.97);
+        box-shadow: 10px 11px 0 var(--ink);
+        scroll-margin-top: 112px;
+      }
+
+      .chapter-heading {
+        display: grid;
+        grid-template-columns: 92px minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+        margin-bottom: 30px;
+      }
+
+      .chapter-number {
+        display: grid;
+        width: 80px;
+        height: 68px;
+        place-items: center;
+        transform: rotate(-2deg);
+        border: 4px solid var(--ink);
+        background: var(--gold);
+        box-shadow: 5px 5px 0 var(--ink);
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 33px;
+        font-weight: 700;
+      }
+
+      .section-tag {
+        padding: 6px 10px 5px;
+        background: var(--coral);
+        color: #fff9df;
+        font-size: 16px;
+        letter-spacing: 0.06em;
+      }
+
+      h2 {
+        margin: 13px 0 0;
+        font-size: 34px;
+        line-height: 1.3;
+        letter-spacing: -0.025em;
+      }
+
+      .chapter-copy {
+        max-width: 920px;
+        margin: 0 auto 34px;
+      }
+
+      .chapter-copy p,
+      .chapter-copy li,
+      .commercial-copy p,
+      .closing p {
+        font-size: 18px;
+        line-height: 1.9;
+      }
+
+      .chapter-copy p { margin: 0 0 18px; }
+
+      .chapter-copy ul {
+        margin: 18px 0 0;
+        padding-left: 1.4em;
+      }
+
+      .chapter-copy li { margin: 8px 0; }
+      .chapter-copy strong,
+      .commercial-copy strong { color: #a83d21; }
+
+      figure { margin: 34px 0 0; }
+
+      figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 5px solid var(--ink);
+        background: var(--cream);
+        box-shadow: 9px 9px 0 rgba(74, 36, 29, 0.82);
+        image-rendering: pixelated;
+      }
+
+      figcaption {
+        margin: 19px 10px 0;
+        color: var(--ink-soft);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.6;
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .analysis-block {
+        padding: 22px 24px;
+        border: 3px solid var(--ink);
+        background: #fff2bd;
+        box-shadow: 5px 5px 0 rgba(74, 36, 29, 0.7);
+      }
+
+      .analysis-block:nth-child(even) { background: #ffe29a; }
+      .analysis-block h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.4; }
+      .analysis-block p { margin: 0; font-size: 16px; line-height: 1.75; }
+
+      .commercial {
+        margin-top: 70px;
+        padding: 44px 50px 46px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 229, 139, 0.97);
+        box-shadow: 10px 11px 0 var(--ink);
+      }
+
+      .commercial h2,
+      .closing h2 { margin-top: 0; }
+
+      .commercial-copy {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 36px;
+      }
+
+      .price-stack { display: grid; gap: 12px; }
+
+      .price-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 14px 16px;
+        border: 3px solid var(--ink);
+        background: var(--paper);
+        box-shadow: 4px 4px 0 rgba(74, 36, 29, 0.7);
+      }
+
+      .price-row span { font-size: 16px; font-weight: 700; }
+      .price-row strong { font-family: "Pixelify Sans", sans-serif; font-size: 24px; }
+
+      .closing {
+        margin-top: 70px;
+        padding: 50px 58px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 250, 229, 0.98);
+        box-shadow: 10px 11px 0 var(--ink);
+      }
+
+      .closing-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+        gap: 46px;
+        align-items: center;
+      }
+
+      .takeaway {
+        padding: 23px 25px;
+        border: 4px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 6px 6px 0 var(--ink);
+        color: #fff9df;
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 1.65;
+      }
+
+      .closing-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .action-button {
+        padding: 12px 18px 10px;
+        border-width: 4px;
+        box-shadow: 5px 5px 0 var(--ink);
+        cursor: pointer;
+      }
+
+      .source-note {
+        margin: 28px 0 0;
+        color: var(--ink-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .source-dialog {
+        width: min(940px, calc(100vw - 140px));
+        max-height: calc(100vh - 96px);
+        margin: auto;
+        padding: 0;
+        overflow: visible;
+        border: 5px solid var(--ink);
+        background: var(--paper);
+        box-shadow: 12px 14px 0 var(--ink);
+        color: var(--ink);
+      }
+
+      .source-dialog::backdrop {
+        background: rgba(74, 36, 29, 0.72);
+        backdrop-filter: blur(3px);
+      }
+
+      .source-dialog::after {
+        content: "";
+        position: absolute;
+        right: 72px;
+        bottom: -34px;
+        width: 34px;
+        height: 34px;
+        border-right: 5px solid var(--ink);
+        border-bottom: 5px solid var(--ink);
+        background: var(--paper);
+        transform: skewY(42deg);
+      }
+
+      .dialog-shell {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        max-height: calc(100vh - 106px);
+      }
+
+      .dialog-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 22px 24px 18px 30px;
+        border-bottom: 4px solid var(--ink);
+        background: var(--cream);
+      }
+
+      .dialog-title-wrap p {
+        margin: 0 0 7px;
+        color: var(--orange);
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .dialog-title-wrap h2 {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      .dialog-close {
+        flex: 0 0 auto;
+        width: 48px;
+        height: 44px;
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff9df;
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .dialog-close:hover,
+      .dialog-close:focus-visible {
+        transform: translate(-1px, -2px);
+        outline: 3px solid #fff;
+        outline-offset: 2px;
+      }
+
+      .document-scroll {
+        overflow-y: auto;
+        padding: 30px 42px 46px;
+        scrollbar-color: var(--orange) #ffe8a6;
+        scrollbar-width: auto;
+      }
+
+      .document-scroll h3 {
+        margin: 32px 0 12px;
+        padding: 7px 11px 6px;
+        border: 3px solid var(--ink);
+        background: var(--gold);
+        box-shadow: 4px 4px 0 rgba(74, 36, 29, 0.68);
+        font-size: 21px;
+        line-height: 1.35;
+      }
+
+      .document-scroll h3:first-child { margin-top: 0; }
+      .document-scroll h4 { margin: 22px 0 8px; font-size: 18px; }
+      .document-scroll p,
+      .document-scroll li { font-size: 16px; line-height: 1.8; }
+      .document-scroll p { margin: 0 0 12px; }
+      .document-scroll ul { margin: 8px 0 14px; padding-left: 1.35em; }
+      .document-scroll li { margin: 6px 0; }
+
+      .doc-meta {
+        padding: 18px 20px;
+        border: 3px solid var(--ink);
+        background: #fff0ba;
+      }
+
+      .doc-meta p:last-child { margin-bottom: 0; }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .pixel-button,
+        .action-button { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <nav class="topbar" aria-label="页面导航">
+      <div class="topbar-links">
+        <a class="pixel-button" href="../../index.html">home</a>
+        <a class="pixel-button" href="../index.html">portfolio</a>
+      </div>
+      <p class="topbar-label">MONITORING REPORT · 02 / 02</p>
+    </nav>
+
+    <main class="report-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">COMPETITOR MONITORING</p>
+          <h1>《重返未来：1999》×原子之心联动版本监控报告</h1>
+          <p class="hero-quote">联动带来明确的存量付费抓手，却没有转化成同比更强的拉新与回流。</p>
+        </div>
+        <div class="hero-meta" aria-label="报告基本信息">
+          <div class="meta-row">
+            <span class="meta-label">VERSION</span>
+            <span class="meta-value">S02「聚合浪潮」<br />原子之心联动版本</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">PERIOD</span>
+            <span class="meta-value">7月23日 10:00—8月12日 4:59<br />共21天</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">SCOPE</span>
+            <span class="meta-value">iOS数据、版本福利、商业化、角色与活动</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="executive-summary" aria-labelledby="summary-title">
+        <h2 class="summary-label" id="summary-title">CORE FINDING</h2>
+        <p>本次联动的首周流水和下载量均弱于《刺客信条》联动，首周流水也低于周年庆版本。原子之心IP受众相对有限、周年庆舆论造成玩家流失，使联动未形成更广泛的拉新；但双生舞伶补齐术具队主C、阶梯礼包与多款直购衣着，又有效承接了仍在游玩家的补队和付费需求。</p>
+      </section>
+
+      <section class="metrics" aria-label="核心数据">
+        <article class="metric">
+          <strong>-14.6%</strong>
+          <span>首周流水较《刺客信条》联动下降</span>
+        </article>
+        <article class="metric">
+          <strong>-24.2%</strong>
+          <span>首周流水较三周年版本下降</span>
+        </article>
+        <article class="metric">
+          <strong>-27.7%</strong>
+          <span>首周下载较《刺客信条》联动下降</span>
+        </article>
+        <article class="metric">
+          <strong>约104抽</strong>
+          <span>社区统计的零氪版本福利总量</span>
+        </article>
+      </section>
+
+      <section class="chapter" id="performance" aria-labelledby="performance-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">01</div>
+          <div>
+            <p class="section-tag">DATA PERFORMANCE</p>
+            <h2 id="performance-title">联动抬升存量付费，但没有恢复拉新体量</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>从首周表现看，本次版本流水与下载量均低于《刺客信条》联动：首周流水下降14.6%，首周下载下降27.7%；与三周年版本相比，流水下降24.2%，下载量则接近，差距为4.4%。首日游戏畅销榜排名第14，也弱于《刺客信条》联动的第11名。</p>
+          <p>排名在7月29日回落至第89，第8日进一步降至第101，首周衰减轨迹与《刺客信条》联动的11→87相近。表现更适合概括为：<strong>联动并未带来更强的新增和回流，但版本内容对存量玩家的付费转化仍然有效。</strong></p>
+          <div class="two-column">
+            <article class="analysis-block">
+              <h3>拉新端</h3>
+              <p>原子之心IP受众相对有限，叠加周年庆舆论事件后的玩家流失，联动覆盖面没有转化为更高下载。</p>
+            </article>
+            <article class="analysis-block">
+              <h3>付费端</h3>
+              <p>双生舞伶补齐术具队主C，多款联动衣着直购上新，促使仍在游玩家为补队、角色和外观继续消费。</p>
+            </article>
+          </div>
+        </div>
+        <figure>
+          <img src="assets/01-crossover-spike-not-recovery.webp" alt="像素插画：联动形成短期热度峰值，但收入与下载指标没有完全恢复" width="1672" height="941" />
+          <figcaption>同样是联动版本，热度并没有自动转化成同比更强的首周流水和下载；需要将IP覆盖与存量付费承接分开观察。</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="welfare" aria-labelledby="welfare-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">02</div>
+          <div>
+            <p class="section-tag">WELFARE PACKAGE</p>
+            <h2 id="welfare-title">约104抽福利，降低联动参与门槛</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>福利结构与《刺客信条》联动相近：登录赠送月卡、限定十连、10天签到获得10个独一律，并免费发放四星联动角色诺拉。原子之心版本还增加衣着优惠券和多项登录材料，社区统计零氪约可获得104抽，整体反馈较正向。</p>
+          <p>征集追加特惠延长了长线抽取目标：首次达到100抽后，每60抽除可额外自选联动角色外，还可以自选一名六星角色。衣着侧则通过任意衣着减390粹雨滴、当季惠选28元或680粹雨滴的折扣，兼顾抽卡和外观消费。</p>
+        </div>
+        <figure>
+          <img src="assets/02-welfare-package-104.webp" alt="像素插画：装有月卡、抽卡票、免费角色和衣着折扣券的104抽福利礼包" width="1672" height="941" loading="lazy" />
+          <figcaption>福利不是单一十连，而是由月卡、限定与常驻抽数、免费联动角色、材料和衣着折扣共同组成的参与包。</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="commercial" aria-labelledby="commercial-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">03</div>
+          <div>
+            <p class="section-tag">MONETIZATION</p>
+            <h2 id="commercial-title">阶梯礼包把两类抽卡需求装进同一条付费路径</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>版本新增“金线的馈奉”阶梯礼包，6元、18元、30元三档依次解锁，后一档必须在购买前一档后开放。每档同时包含联动池与常驻池抽卡道具，并配套养成材料，使小额付费和月卡玩家不必在“抽联动角色”与“补常驻角色”之间二选一。</p>
+          <p>“银色双子星”保留45元与98元两档，并将部分抽数放在取得双生舞伶后追加发放：已经出货的玩家会继续补塑造，尚未取得角色的玩家则会为了提高礼包性价比继续下池。100、160、220、280抽节点还可自选当期角色或箱装印象，进一步承接补角色与补塑造需求。</p>
+        </div>
+        <figure>
+          <img src="assets/03-tiered-bundle-dual-tickets.webp" alt="像素插画：6元18元30元阶梯礼包同时产出联动票与常驻票" width="1672" height="941" loading="lazy" />
+          <figcaption>阶梯解锁降低首次付费门槛；双票并行和出货后返还，则把一次购买延展成持续抽取的理由。</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="character" aria-labelledby="character-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">04</div>
+          <div>
+            <p class="section-tag">CHARACTER & OUTFITS</p>
+            <h2 id="character-title">双生舞伶补齐术具队，也把队友缺口变成后续需求</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>双生舞伶定位为术具体系主C，是首位双灵感六星角色：拥有星／岩双灵感，可同时装备两件专属心相，大招会清算两类能量。两件专属心相都能通过版本内容获得，0塑即可完成核心循环，降低了主C本体的养成阻力。</p>
+          <p>理想配队为<strong>双生舞伶＋回声谣＋珐琅眼＋小瑞安侬</strong>。这些队友集中在近期版本推出，已有核心辅助的玩家容易形成“只差主C”的补队心理；缺少关键辅助的玩家，则会产生后续复刻需求。版本同时上新4款直购衣着、1款活动免费衣着和1款BP衣着，覆盖高活跃角色、联动主角、低价高持有率角色与零氪人群。</p>
+          <div class="two-column">
+            <article class="analysis-block">
+              <h3>战斗价值</h3>
+              <p>高数值主C直接解决术具体系最后一个核心位置，角色与前置版本队友形成明确的售后关系。</p>
+            </article>
+            <article class="analysis-block">
+              <h3>外观价值</h3>
+              <p>纸信圈儿98元、双生舞伶与玛丽安娜68元、泥鯭的士28元，价格与角色持有率、强度和视觉创新相匹配。</p>
+            </article>
+          </div>
+        </div>
+        <figure>
+          <img src="assets/04-main-carry-team-core.webp" alt="像素插画：双生舞伶作为术具队主C连接回声谣珐琅眼与小瑞安侬" width="1672" height="941" loading="lazy" />
+          <figcaption>新角色既完成现有队伍，也为缺少辅助的玩家留下复刻需求；主C、队友和外观共同构成版本的存量付费核心。</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="activity" aria-labelledby="activity-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">05</div>
+          <div>
+            <p class="section-tag">ACTIVITY LOOP</p>
+            <h2 id="activity-title">“重返切洛梅”把联动设定转化成探索循环</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>联动专属活动“重返切洛梅”以3826号设施为舞台，将《原子之心》的场景探索、手套升级和资料收集，转化成地图探索、解谜与战斗循环。玩家在多个地标间处理机器人失控和技术难题，消耗神经聚合物解锁并强化聚合物手套，使其在后续战斗中提供增益。</p>
+          <p>探索过程中收集的历史与角色信息会进入“公开档案”；内置小游戏“思维导图”承担解谜环节。如果卡关，玩家可以长按“暴力拆解”直接通关，保留解谜主题的同时避免进度被单一谜题阻断。</p>
+        </div>
+        <figure>
+          <img src="assets/05-facility-3826-exploration-loop.webp" alt="像素插画：3826号设施地图串联探索解谜手套升级战斗与档案收集" width="1672" height="941" loading="lazy" />
+          <figcaption>活动没有只复用联动视觉，而是把IP中的设施、聚合物手套与公开档案分别嵌入地图推进、成长和收集反馈。</figcaption>
+        </figure>
+      </section>
+
+      <section class="commercial" aria-labelledby="price-title">
+        <h2 id="price-title">商业化结构补充</h2>
+        <div class="commercial-copy">
+          <div>
+            <p>“金线的馈奉”越往后单抽折合价格越高，但同步提供更多抽卡资源和养成材料。它并非单纯追求最低单抽价格，而是通过低门槛起步、连续解锁和双池资源，促使小额付费玩家逐档完成购买。</p>
+            <p>衣着端通过优惠券和当季惠选折扣覆盖高低不同预算；角色端通过出货后返还和多档自选节点延长抽卡深度，形成<strong>福利吸引参与—低价礼包启动付费—角色队伍促成补强—外观承接额外消费</strong>的完整链路。</p>
+          </div>
+          <div class="price-stack" aria-label="阶梯礼包折合价格">
+            <div class="price-row"><span>购买6元档</span><strong>约3元／抽</strong></div>
+            <div class="price-row"><span>购买6＋18元档</span><strong>约4元／抽</strong></div>
+            <div class="price-row"><span>购买6＋18＋30元档</span><strong>约4.5元／抽</strong></div>
+            <div class="price-row"><span>衣着优惠</span><strong>-390粹雨滴</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="closing-grid">
+          <div>
+            <h2 id="closing-title">结论</h2>
+            <p>原子之心联动版本没有复制《刺客信条》联动的拉新规模，首周流水也低于周年庆版本，但它通过高福利、术具体系主C、双池阶梯礼包和多档衣着，形成了对存量玩家更清晰的转化链路。版本的优势在于“补齐需求”设计完整，限制则在于IP受众与前序舆论共同压缩了可转化人群。</p>
+            <div class="closing-actions" aria-label="报告页面操作">
+              <a class="action-button primary" href="../index.html">返回作品集</a>
+              <button class="action-button" id="open-source" type="button">查看原文</button>
+            </div>
+          </div>
+          <div class="takeaway">联动负责吸引注意，真正承接收入的是队伍补齐、分层付费与外观供给。</div>
+        </div>
+        <p class="source-note">数据口径：iOS表现，比较对象与百分比均来自原监控报告。福利总量为报告记录的社区统计；玩家反馈与归因属于版本期观察，不作为官方事实判断。</p>
+      </section>
+    </main>
+
+    <dialog class="source-dialog" id="source-dialog" aria-labelledby="source-dialog-title">
+      <div class="dialog-shell">
+        <header class="dialog-header">
+          <div class="dialog-title-wrap">
+            <p>ORIGINAL REPORT · SCROLL TO READ</p>
+            <h2 id="source-dialog-title">《重返未来：1999》×原子之心联动版本 监控报告</h2>
+          </div>
+          <button class="dialog-close" id="close-source" type="button" aria-label="关闭原文窗口">×</button>
+        </header>
+        <article class="document-scroll" tabindex="0">
+          <div class="doc-meta">
+            <p><strong>版本：</strong>《重返未来：1999》S02版本</p>
+            <p><strong>版本名：</strong>聚合浪潮 - 原子之心联动版本</p>
+            <p><strong>版本时长：</strong>7.23 10:00—8.12 4:59（21天）</p>
+          </div>
+
+          <h3>数据表现（iOS）</h3>
+          <p><strong>整体评价：</strong>首周流水和下载量对比刺客信条联动版本均下降。较3.8版本流水上升，下载量下降。较周年庆（3.7）版本流水下降，下载量接近。</p>
+          <ul>
+            <li><strong>首周流水：</strong>低于刺客信条联动版本14.6%，低于周年庆24.2%。</li>
+            <li><strong>首周下载：</strong>拉新与回流效果低于刺客信条版本27.7%，低于26年春节版本46.7%，与三周年庆版本接近，差距为4.4%。</li>
+            <li><strong>首日表现：</strong>游戏畅销榜第14，弱于刺客信条联动的第11名。畅销榜至7月29日回落至89，第8日为101，首周衰减轨迹与刺客信条的11→87相近。</li>
+          </ul>
+          <h4>关键归因</h4>
+          <ul>
+            <li>原子之心IP受众相对局限。</li>
+            <li>周年庆舆论事件造成玩家流失。</li>
+            <li>存量付费转化相对更强：双生舞伶补齐术具队主C，多款皮肤直购上新，提高已有玩家付费。</li>
+          </ul>
+
+          <h3>主要福利</h3>
+          <p><strong>整体评价：</strong>福利结构与刺客信条联动相近，均以登录送月卡、联动征集追加特惠、登录十连、签到抽数和免费联动角色为核心；原子之心版本另增加衣着优惠与多项登录材料奖励。社区统计零氪约可以获得104抽福利，社区反响良好。</p>
+          <ul>
+            <li>登录送月卡。</li>
+            <li>联动征集追加特惠：首次100次征集后，每60次征集，除可额外自选联动角色外，还可自选六星角色1名。</li>
+            <li>登录送衣着优惠：任意衣着减390粹雨滴；当季特惠直购价降低17元。</li>
+            <li>登录送版本限定10连，仅活动UP池可用。</li>
+            <li>10天签到送独一律10个。</li>
+            <li>登录领取联动四星角色诺拉。</li>
+            <li>“综合体日常”提供苦目糖罐、利齿子儿等登录与任务材料。</li>
+          </ul>
+
+          <h3>商业化</h3>
+          <p><strong>整体评价：</strong>新增阶梯礼包、联动角色礼包，并更新联动征集追加奖励。</p>
+          <h4>金线的馈奉</h4>
+          <ul>
+            <li>6元、18元、30元依次解锁，必须购买前一档才能购买下一档。</li>
+            <li>每档同时包含“银色拟剧论”和“湖的涟漪”征集道具，并配套养成材料。玩家可同时抽取联动角色和补常驻角色。</li>
+            <li>目标受众为被联动吸引、但预算不足以直接购买高价抽数包的小额付费和月卡玩家。</li>
+            <li>折合价格：购买6元档约3元／抽；购买6＋18元档约4元／抽；购买6＋18＋30元档约4.5元／抽。</li>
+          </ul>
+          <h4>银色双子星</h4>
+          <ul>
+            <li>设置45元与98元两档，并把部分抽数放在取得双生舞伶后追加发放。</li>
+            <li>已出货玩家继续补塑造；未取得角色的玩家继续下池，以提高已购礼包的性价比。</li>
+          </ul>
+          <h4>征集追加“箱装印象”选择</h4>
+          <p>在100、160、220、280抽征集档位达成时，可自选当期角色或箱装印象（自选六星），满足补角色与补塑造需求。</p>
+
+          <h3>新角色</h3>
+          <p><strong>整体评价：</strong>双生舞伶定位为高数值主C，但依赖术具体系，承担3.8版本售后与补强转化。</p>
+          <ul>
+            <li>首位双灵感六星角色，0塑可完成核心循环，配队高度依赖术具角色。</li>
+            <li>拥有星／岩双灵感，可同时装备两件专属心相；大招会清算两类能量。</li>
+            <li>两件专属心相均通过版本内容获得。</li>
+            <li>理想配队：双生舞伶＋回声谣＋珐琅眼＋小瑞安侬。</li>
+            <li>回声谣为3.8版本角色；珐琅眼曾于周年庆免费赠送；小瑞安侬为3.7周年版本角色，当前均暂无获取方式。</li>
+          </ul>
+
+          <h3>衣着</h3>
+          <p>本次上新4款直购衣着、1款活动免费衣着与1款BP衣着。</p>
+          <ul>
+            <li>纸信圈儿“原子时报晓”：98元／1680粹雨滴。角色仍是额外行动体系泛用辅助与副C，使用率高，复刻可承接无圈玩家补队。</li>
+            <li>双生舞伶“可编程挽歌”：68元／1080粹雨滴。打破传统芭蕾舞裙设计，Live2D表现较好。</li>
+            <li>玛丽安娜“称量罪与理”：68元／1080粹雨滴。</li>
+            <li>泥鯭的士“共生花”：28元／680粹雨滴。角色获取稳定、持有率高，低价更利于转化。</li>
+            <li>宽帽檐“思维驾驶者”：活动免费获取，服务零氪与低氪玩家的参与和口碑。</li>
+            <li>北方哨歌“银色等高线”：BP衣着；角色进入“湖的涟漪”自选范围，狂想强化后短轴爆发提高。</li>
+          </ul>
+          <p><strong>衣着特惠：</strong>购买任意衣着可抵扣390粹雨滴；当季惠选可按28元直购（原价45元），或680粹雨滴（原价880粹雨滴），并可叠加任意衣着优惠券。</p>
+
+          <h3>版本活动</h3>
+          <p>新增联动专属探索活动“重返切洛梅”，为解谜类玩法。</p>
+          <ul>
+            <li>玩家在3826号设施多个地标间探索，处理机器人失控和技术难题。</li>
+            <li>消耗神经聚合物，解锁并强化聚合物手套能力，为后续战斗提供增益。</li>
+            <li>历史与角色信息进入“公开档案”。</li>
+            <li>内置小游戏“思维导图”；卡关时可长按“暴力拆解”直接通关。</li>
+          </ul>
+        </article>
+      </div>
+    </dialog>
+
+    <script>
+      (() => {
+        const progress = document.querySelector(".scroll-progress");
+        const dialog = document.querySelector("#source-dialog");
+        const openButton = document.querySelector("#open-source");
+        const closeButton = document.querySelector("#close-source");
+
+        const updateProgress = () => {
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          const ratio = max > 0 ? window.scrollY / max : 0;
+          progress.style.width = `${Math.min(1, Math.max(0, ratio)) * 100}%`;
+        };
+
+        const openDialog = () => {
+          dialog.showModal();
+          document.body.classList.add("modal-open");
+          closeButton.focus();
+        };
+
+        const closeDialog = () => dialog.close();
+
+        openButton.addEventListener("click", openDialog);
+        closeButton.addEventListener("click", closeDialog);
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) closeDialog();
+        });
+        dialog.addEventListener("close", () => {
+          document.body.classList.remove("modal-open");
+          openButton.focus();
+        });
+        dialog.addEventListener("cancel", () => {
+          document.body.classList.remove("modal-open");
+        });
+
+        updateProgress();
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+      })();
+    </script>
+  </body>
+</html>

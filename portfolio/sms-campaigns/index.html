@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noimageindex" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%23ffd34e'/%3E%3Cpath d='M6 6h20v20H6z' fill='%23ff7427' stroke='%234a241d' stroke-width='3'/%3E%3Cpath d='M10 11h12M10 16h9M10 21h11' stroke='%23fff6ca' stroke-width='3'/%3E%3C/svg%3E" />
+    <title>营销短信产出 · King Artball</title>
+    <style>
+      @font-face {
+        font-family: "Pixelify Sans";
+        src: url("../../assets/PixelifySans.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 400 700;
+      }
+
+      :root {
+        --ink: #4a241d;
+        --ink-soft: #744638;
+        --paper: #fffaf0;
+        --cream: #fff2bd;
+        --sun: #ffd34e;
+        --orange: #ff7427;
+        --coral: #ff7165;
+        --gold: #ffb62d;
+        --blue: #6dcbd6;
+      }
+
+      * { box-sizing: border-box; }
+
+      html,
+      body {
+        min-width: 1180px;
+        min-height: 760px;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--sun);
+        font-family: "Pixelify Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      body.viewer-open { overflow: hidden; }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(rgba(255, 225, 123, 0.78), rgba(255, 188, 70, 0.68)),
+          url("../../assets/pixel-woodland-background-v2.png") center / cover no-repeat;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg, rgba(255, 250, 224, 0.2), transparent 42%, rgba(255, 116, 39, 0.08)),
+          rgba(255, 246, 202, 0.08);
+      }
+
+      .topbar {
+        position: sticky;
+        z-index: 20;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 48px 15px;
+        border-bottom: 4px solid var(--ink);
+        background: rgba(255, 242, 189, 0.96);
+        box-shadow: 0 6px 0 rgba(74, 36, 29, 0.18);
+        backdrop-filter: blur(5px);
+      }
+
+      .topbar-links { display: flex; gap: 12px; }
+
+      .pixel-button {
+        display: inline-block;
+        padding: 9px 15px 7px;
+        border: 3px solid var(--ink);
+        background: var(--paper);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: inherit;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        transition: transform 120ms steps(2, end), filter 120ms steps(2, end);
+      }
+
+      .pixel-button:first-child { background: var(--orange); color: #fff9df; }
+      .pixel-button:hover,
+      .pixel-button:focus-visible {
+        transform: translate(-2px, -3px);
+        filter: brightness(1.06) saturate(1.08);
+        outline: none;
+      }
+
+      .topbar-label {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .page-shell {
+        width: min(1360px, calc(100vw - 72px));
+        margin: 38px auto 70px;
+      }
+
+      .page-heading {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 24px;
+      }
+
+      .kicker {
+        display: inline-block;
+        margin: 0 0 8px;
+        padding: 7px 11px 5px;
+        transform: rotate(-1.5deg);
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff9df;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 52px;
+        line-height: 0.95;
+        letter-spacing: -0.035em;
+        text-shadow: 3px 3px 0 rgba(255, 246, 202, 0.85);
+      }
+
+      .page-tip {
+        margin: 0 4px 2px 0;
+        padding: 9px 13px 7px;
+        transform: rotate(1deg);
+        border: 3px solid var(--ink);
+        background: rgba(255, 250, 229, 0.96);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .sms-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+        align-items: start;
+      }
+
+      .sms-card {
+        --tilt: 0deg;
+        position: relative;
+        min-width: 0;
+        padding: 15px 15px 17px;
+        border: 4px solid var(--ink);
+        background: rgba(255, 250, 229, 0.98);
+        box-shadow: 7px 8px 0 rgba(74, 36, 29, 0.9);
+        transform: rotate(var(--tilt));
+        transform-origin: 50% 90%;
+        transition: transform 150ms steps(2, end), filter 150ms steps(2, end);
+      }
+
+      .sms-card:nth-child(1) { --tilt: -0.65deg; }
+      .sms-card:nth-child(2) { --tilt: 0.55deg; }
+      .sms-card:nth-child(3) { --tilt: -0.4deg; }
+      .sms-card:nth-child(4) { --tilt: 0.7deg; }
+
+      .sms-card:hover,
+      .sms-card:focus-within {
+        transform: translateY(-7px) scale(1.02) rotate(calc(var(--tilt) * -1));
+        filter: brightness(1.03) saturate(1.05);
+      }
+
+      .sms-number {
+        position: absolute;
+        z-index: 2;
+        top: -14px;
+        right: 13px;
+        display: grid;
+        width: 48px;
+        height: 39px;
+        place-items: center;
+        border: 3px solid var(--ink);
+        background: var(--orange);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff9df;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .sms-title {
+        min-height: 66px;
+        margin: 4px 0 12px;
+        padding: 14px 13px 11px;
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 rgba(74, 36, 29, 0.72);
+        color: #fff9df;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.35;
+      }
+
+      .sms-preview {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 460px;
+        padding: 0;
+        overflow: hidden;
+        border: 4px solid var(--ink);
+        background: #f2e7d3;
+        box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.52);
+        cursor: pointer;
+      }
+
+      .sms-preview img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        image-rendering: auto;
+        transition: transform 180ms steps(3, end), filter 180ms steps(3, end);
+      }
+
+      .sms-preview::after {
+        content: "VIEW ORIGINAL";
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        padding: 6px 8px 4px;
+        border: 2px solid var(--ink);
+        background: rgba(255, 211, 78, 0.96);
+        box-shadow: 3px 3px 0 var(--ink);
+        color: var(--ink);
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .sms-preview:hover img,
+      .sms-preview:focus-visible img { transform: scale(1.035); filter: saturate(1.07); }
+      .sms-preview:focus-visible { outline: 4px solid var(--blue); outline-offset: 3px; }
+
+      .sms-note {
+        margin: 12px 2px 0;
+        color: var(--ink-soft);
+        font-size: 15px;
+        font-weight: 700;
+        text-align: right;
+      }
+
+      .viewer-dialog {
+        width: min(820px, calc(100vw - 140px));
+        max-height: calc(100vh - 76px);
+        margin: auto;
+        padding: 0;
+        overflow: visible;
+        border: 5px solid var(--ink);
+        background: var(--paper);
+        box-shadow: 12px 14px 0 var(--ink);
+        color: var(--ink);
+      }
+
+      .viewer-dialog::backdrop {
+        background: rgba(74, 36, 29, 0.76);
+        backdrop-filter: blur(3px);
+      }
+
+      .viewer-dialog::after {
+        content: "";
+        position: absolute;
+        right: 84px;
+        bottom: -34px;
+        width: 34px;
+        height: 34px;
+        border-right: 5px solid var(--ink);
+        border-bottom: 5px solid var(--ink);
+        background: var(--paper);
+        transform: skewY(42deg);
+      }
+
+      .viewer-shell {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        max-height: calc(100vh - 86px);
+      }
+
+      .viewer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        padding: 18px 22px 15px 26px;
+        border-bottom: 4px solid var(--ink);
+        background: var(--cream);
+      }
+
+      .viewer-heading p {
+        margin: 0 0 5px;
+        color: var(--orange);
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .viewer-heading h2 {
+        margin: 0;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 25px;
+        line-height: 1.3;
+      }
+
+      .viewer-close {
+        display: grid;
+        flex: 0 0 auto;
+        width: 48px;
+        height: 44px;
+        place-items: center;
+        border: 3px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 4px 4px 0 var(--ink);
+        color: #fff9df;
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .viewer-close:hover,
+      .viewer-close:focus-visible {
+        transform: translate(-1px, -2px);
+        filter: brightness(1.06);
+        outline: 3px solid #fff;
+        outline-offset: 2px;
+      }
+
+      .viewer-stage {
+        min-height: 0;
+        padding: 20px 28px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        background:
+          linear-gradient(rgba(255, 235, 157, 0.58), rgba(255, 250, 229, 0.72)),
+          repeating-linear-gradient(0deg, transparent 0 24px, rgba(255, 116, 39, 0.08) 24px 27px);
+        scrollbar-color: var(--orange) var(--cream);
+      }
+
+      .viewer-image {
+        display: block;
+        width: min(600px, 100%);
+        height: auto;
+        margin: 0 auto;
+        border: 4px solid var(--ink);
+        background: #fff;
+        box-shadow: 7px 8px 0 rgba(74, 36, 29, 0.78);
+        image-rendering: auto;
+      }
+
+      .viewer-footer {
+        padding: 11px 24px 13px;
+        border-top: 4px solid var(--ink);
+        background: var(--cream);
+        text-align: center;
+      }
+
+      .viewer-note {
+        margin: 0;
+        color: var(--ink-soft);
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .pixel-button,
+        .sms-card,
+        .sms-preview img { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="topbar" aria-label="页面导航">
+      <div class="topbar-links">
+        <a class="pixel-button" href="../../index.html">home</a>
+        <a class="pixel-button" href="../index.html">portfolio</a>
+      </div>
+      <p class="topbar-label">MARKETING · SMS COPY</p>
+    </nav>
+
+    <main class="page-shell">
+      <header class="page-heading">
+        <div>
+          <p class="kicker">CONTENT OUTPUT</p>
+          <h1>营销短信产出</h1>
+        </div>
+        <p class="page-tip">click to view original ✦</p>
+      </header>
+
+      <section class="sms-grid" aria-label="四份营销短信作品">
+        <article class="sms-card" data-title="1.1版本下半短信" data-image="assets/v1-1-second-half.jpeg">
+          <span class="sms-number">01</span>
+          <h2 class="sms-title">1.1版本下半短信</h2>
+          <button class="sms-preview" type="button" aria-label="查看1.1版本下半短信原图">
+            <img src="assets/v1-1-second-half.jpeg" alt="1.1版本下半营销短信发送截图" width="1206" height="1979" />
+          </button>
+          <p class="sms-note">SMS CAPTURE · ORIGINAL</p>
+        </article>
+
+        <article class="sms-card" data-title="1.2版本上半短信" data-image="assets/v1-2-first-half.jpeg">
+          <span class="sms-number">02</span>
+          <h2 class="sms-title">1.2版本上半短信</h2>
+          <button class="sms-preview" type="button" aria-label="查看1.2版本上半短信原图">
+            <img src="assets/v1-2-first-half.jpeg" alt="1.2版本上半营销短信发送截图" width="1206" height="1924" />
+          </button>
+          <p class="sms-note">SMS CAPTURE · ORIGINAL</p>
+        </article>
+
+        <article class="sms-card" data-title="1.2版本下半短信" data-image="assets/v1-2-second-half.jpeg">
+          <span class="sms-number">03</span>
+          <h2 class="sms-title">1.2版本下半短信</h2>
+          <button class="sms-preview" type="button" aria-label="查看1.2版本下半短信原图">
+            <img src="assets/v1-2-second-half.jpeg" alt="1.2版本下半营销短信发送截图" width="1205" height="1873" />
+          </button>
+          <p class="sms-note">SMS CAPTURE · ORIGINAL</p>
+        </article>
+
+        <article class="sms-card" data-title="1.3版本上半短信" data-image="assets/v1-3-first-half.jpeg">
+          <span class="sms-number">04</span>
+          <h2 class="sms-title">1.3版本上半短信</h2>
+          <button class="sms-preview" type="button" aria-label="查看1.3版本上半短信原图">
+            <img src="assets/v1-3-first-half.jpeg" alt="1.3版本上半营销短信发送截图" width="1206" height="1974" />
+          </button>
+          <p class="sms-note">SMS CAPTURE · ORIGINAL</p>
+        </article>
+      </section>
+    </main>
+
+    <dialog class="viewer-dialog" id="sms-viewer" aria-labelledby="viewer-title">
+      <div class="viewer-shell">
+        <header class="viewer-header">
+          <div class="viewer-heading">
+            <p>ORIGINAL SMS CAPTURE</p>
+            <h2 id="viewer-title">营销短信原图</h2>
+          </div>
+          <button class="viewer-close" id="viewer-close" type="button" aria-label="关闭短信原图预览">×</button>
+        </header>
+        <div class="viewer-stage" id="viewer-stage">
+          <img class="viewer-image" id="viewer-image" src="assets/v1-1-second-half.jpeg" alt="营销短信原图" />
+        </div>
+        <footer class="viewer-footer">
+          <p class="viewer-note">在窗口内上下滚动查看完整原图</p>
+        </footer>
+      </div>
+    </dialog>
+
+    <script>
+      (() => {
+        const dialog = document.querySelector("#sms-viewer");
+        const title = document.querySelector("#viewer-title");
+        const image = document.querySelector("#viewer-image");
+        const stage = document.querySelector("#viewer-stage");
+        const closeButton = document.querySelector("#viewer-close");
+        const cards = [...document.querySelectorAll(".sms-card")];
+        let opener = null;
+
+        const openViewer = (card, button) => {
+          opener = button;
+          title.textContent = card.dataset.title;
+          image.src = card.dataset.image;
+          image.alt = `${card.dataset.title}原图`;
+          stage.scrollTop = 0;
+          dialog.showModal();
+          document.body.classList.add("viewer-open");
+          closeButton.focus();
+        };
+
+        const closeViewer = () => dialog.close();
+
+        cards.forEach((card) => {
+          const button = card.querySelector(".sms-preview");
+          button.addEventListener("click", () => openViewer(card, button));
+        });
+
+        closeButton.addEventListener("click", closeViewer);
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) closeViewer();
+        });
+
+        dialog.addEventListener("close", () => {
+          document.body.classList.remove("viewer-open");
+          opener?.focus();
+        });
+
+        dialog.addEventListener("cancel", () => {
+          document.body.classList.remove("viewer-open");
+        });
+      })();
+    </script>
+  </body>
+</html>

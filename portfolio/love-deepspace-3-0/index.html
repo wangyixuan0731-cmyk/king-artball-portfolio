@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noimageindex" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>《恋与深空》祁煜日卡3.0版本监控报告 · King Artball</title>
+    <style>
+      @font-face {
+        font-family: "Pixelify Sans";
+        src: url("../../assets/PixelifySans.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 400 700;
+      }
+
+      :root {
+        --ink: #4a241d;
+        --ink-soft: #704033;
+        --paper: #fffaf0;
+        --cream: #fff2bd;
+        --sun: #ffd34e;
+        --orange: #ff7427;
+        --coral: #ff7165;
+        --gold: #ffb62d;
+        --blue: #77cadd;
+        --shadow: rgba(74, 36, 29, 0.9);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        min-width: 1100px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 1100px;
+        margin: 0;
+        overflow-x: hidden;
+        color: var(--ink);
+        background: var(--sun);
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(rgba(255, 232, 148, 0.84), rgba(255, 198, 79, 0.8)),
+          url("../../assets/pixel-woodland-background-v2.png") center / cover no-repeat;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg, rgba(255, 250, 224, 0.22), transparent 32%, rgba(255, 116, 39, 0.08)),
+          rgba(255, 246, 202, 0.12);
+      }
+
+      a { color: inherit; }
+
+      .scroll-progress {
+        position: fixed;
+        z-index: 30;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 7px;
+        background: var(--orange);
+        box-shadow: 0 2px 0 var(--ink);
+      }
+
+      .topbar {
+        position: sticky;
+        z-index: 20;
+        top: 0;
+        display: flex;
+        min-width: 1100px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 19px 48px 16px;
+        border-bottom: 4px solid var(--ink);
+        background: rgba(255, 242, 189, 0.96);
+        box-shadow: 0 6px 0 rgba(74, 36, 29, 0.18);
+        backdrop-filter: blur(5px);
+      }
+
+      .topbar-links {
+        display: flex;
+        gap: 12px;
+      }
+
+      .pixel-button {
+        display: inline-block;
+        padding: 9px 15px 7px;
+        border: 3px solid var(--ink);
+        background: var(--paper);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        transition: transform 120ms steps(2, end), filter 120ms steps(2, end);
+      }
+
+      .pixel-button:first-child {
+        background: var(--orange);
+        color: #fff9df;
+      }
+
+      .pixel-button:hover,
+      .pixel-button:focus-visible {
+        transform: translate(-2px, -3px);
+        filter: brightness(1.05) saturate(1.08);
+        outline: none;
+      }
+
+      .topbar-label {
+        margin: 0;
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .report-shell {
+        width: min(1160px, calc(100vw - 96px));
+        margin: 54px auto 88px;
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(310px, 0.7fr);
+        gap: 44px;
+        padding: 52px 56px 48px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 250, 229, 0.97);
+        box-shadow: 10px 11px 0 var(--ink);
+      }
+
+      .eyebrow,
+      .section-tag,
+      .summary-label {
+        display: inline-block;
+        margin: 0;
+        border: 3px solid var(--ink);
+        box-shadow: 4px 4px 0 var(--ink);
+        font-family: "Pixelify Sans", "PingFang SC", sans-serif;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .eyebrow {
+        padding: 8px 13px 6px;
+        transform: rotate(-1.5deg);
+        background: var(--coral);
+        color: #fff8dc;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 25px 0 20px;
+        font-size: 48px;
+        line-height: 1.23;
+        letter-spacing: -0.035em;
+      }
+
+      .hero-quote {
+        max-width: 680px;
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1.7;
+      }
+
+      .hero-meta {
+        display: grid;
+        align-content: center;
+        gap: 16px;
+      }
+
+      .meta-row {
+        padding: 14px 16px 13px;
+        border: 3px solid var(--ink);
+        background: var(--cream);
+        box-shadow: 5px 5px 0 rgba(74, 36, 29, 0.72);
+      }
+
+      .meta-row:nth-child(even) { background: #ffe29a; }
+
+      .meta-label {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--ink-soft);
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .meta-value {
+        display: block;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .executive-summary {
+        margin: 48px 0 0;
+        padding: 34px 40px 32px;
+        border: 4px solid var(--ink);
+        background: rgba(255, 236, 160, 0.96);
+        box-shadow: 8px 8px 0 var(--ink);
+      }
+
+      .summary-label {
+        padding: 7px 11px 5px;
+        background: var(--orange);
+        color: #fff9df;
+        font-size: 18px;
+      }
+
+      .executive-summary p {
+        margin: 22px 0 0;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.85;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin: 34px 0 0;
+      }
+
+      .metric {
+        min-height: 145px;
+        padding: 22px 20px 18px;
+        border: 4px solid var(--ink);
+        background: rgba(255, 250, 229, 0.97);
+        box-shadow: 6px 7px 0 rgba(74, 36, 29, 0.82);
+      }
+
+      .metric:nth-child(2),
+      .metric:nth-child(4) { background: rgba(255, 229, 139, 0.98); }
+
+      .metric strong {
+        display: block;
+        margin-bottom: 9px;
+        color: var(--orange);
+        font-family: "Pixelify Sans", "PingFang SC", sans-serif;
+        font-size: 35px;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.55;
+      }
+
+      .chapter {
+        margin-top: 70px;
+        padding: 46px 50px 50px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 250, 229, 0.97);
+        box-shadow: 10px 11px 0 var(--ink);
+        scroll-margin-top: 112px;
+      }
+
+      .chapter-heading {
+        display: grid;
+        grid-template-columns: 92px minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+        margin-bottom: 30px;
+      }
+
+      .chapter-number {
+        display: grid;
+        width: 80px;
+        height: 68px;
+        place-items: center;
+        transform: rotate(-2deg);
+        border: 4px solid var(--ink);
+        background: var(--gold);
+        box-shadow: 5px 5px 0 var(--ink);
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 33px;
+        font-weight: 700;
+      }
+
+      .section-tag {
+        padding: 6px 10px 5px;
+        background: var(--coral);
+        color: #fff9df;
+        font-size: 16px;
+        letter-spacing: 0.06em;
+      }
+
+      h2 {
+        margin: 13px 0 0;
+        font-size: 34px;
+        line-height: 1.3;
+        letter-spacing: -0.025em;
+      }
+
+      .chapter-copy {
+        max-width: 920px;
+        margin: 0 auto 34px;
+      }
+
+      .chapter-copy p,
+      .chapter-copy li,
+      .commercial-copy p,
+      .closing p {
+        font-size: 18px;
+        line-height: 1.9;
+      }
+
+      .chapter-copy p { margin: 0 0 18px; }
+
+      .chapter-copy ul {
+        margin: 18px 0 0;
+        padding-left: 1.4em;
+      }
+
+      .chapter-copy li { margin: 8px 0; }
+
+      .chapter-copy strong,
+      .commercial-copy strong { color: #a83d21; }
+
+      figure {
+        margin: 34px 0 0;
+      }
+
+      figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 5px solid var(--ink);
+        background: var(--cream);
+        box-shadow: 9px 9px 0 rgba(74, 36, 29, 0.82);
+        image-rendering: pixelated;
+      }
+
+      figcaption {
+        margin: 19px 10px 0;
+        color: var(--ink-soft);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.6;
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .analysis-block {
+        padding: 22px 24px;
+        border: 3px solid var(--ink);
+        background: #fff2bd;
+        box-shadow: 5px 5px 0 rgba(74, 36, 29, 0.7);
+      }
+
+      .analysis-block:nth-child(even) { background: #ffe29a; }
+
+      .analysis-block h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+
+      .analysis-block p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      .commercial {
+        margin-top: 70px;
+        padding: 44px 50px 46px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 229, 139, 0.97);
+        box-shadow: 10px 11px 0 var(--ink);
+      }
+
+      .commercial h2,
+      .closing h2 { margin-top: 0; }
+
+      .commercial-copy {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 36px;
+      }
+
+      .price-stack {
+        display: grid;
+        gap: 12px;
+      }
+
+      .price-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 14px 16px;
+        border: 3px solid var(--ink);
+        background: var(--paper);
+        box-shadow: 4px 4px 0 rgba(74, 36, 29, 0.7);
+      }
+
+      .price-row span { font-size: 16px; font-weight: 700; }
+      .price-row strong { font-family: "Pixelify Sans", sans-serif; font-size: 24px; }
+
+      .closing {
+        margin-top: 70px;
+        padding: 50px 58px;
+        border: 5px solid var(--ink);
+        background: rgba(255, 250, 229, 0.98);
+        box-shadow: 10px 11px 0 var(--ink);
+      }
+
+      .closing-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+        gap: 46px;
+        align-items: center;
+      }
+
+      .takeaway {
+        padding: 23px 25px;
+        border: 4px solid var(--ink);
+        background: var(--coral);
+        box-shadow: 6px 6px 0 var(--ink);
+        color: #fff9df;
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 1.65;
+      }
+
+      .closing-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .back-link {
+        display: inline-block;
+        padding: 12px 18px 10px;
+        border: 4px solid var(--ink);
+        background: var(--orange);
+        box-shadow: 5px 5px 0 var(--ink);
+        color: #fff9df;
+        font-family: "Pixelify Sans", "PingFang SC", sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 120ms steps(2, end), filter 120ms steps(2, end);
+      }
+
+      .original-link {
+        background: var(--cream);
+        color: var(--ink);
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        transform: translate(-2px, -3px);
+        filter: brightness(1.06) saturate(1.08);
+        outline: none;
+      }
+
+      .source-note {
+        margin: 28px 0 0;
+        color: var(--ink-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .pixel-button,
+        .back-link { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <nav class="topbar" aria-label="页面导航">
+      <div class="topbar-links">
+        <a class="pixel-button" href="../../">home</a>
+        <a class="pixel-button" href="../">portfolio</a>
+      </div>
+      <p class="topbar-label">MONITORING REPORT · 01 / 05</p>
+    </nav>
+
+    <main class="report-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">COMPETITOR MONITORING</p>
+          <h1>《恋与深空》祁煜日卡3.0版本监控报告</h1>
+          <p class="hero-quote">“我氪的不是金，是我推的排面”——一次排名反弹与大盘恢复之间的差异观察。</p>
+        </div>
+        <div class="hero-meta" aria-label="报告基本信息">
+          <div class="meta-row">
+            <span class="meta-label">VERSION</span>
+            <span class="meta-value">「破阵子」</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">PERIOD</span>
+            <span class="meta-value">8月17日—8月31日<br />共13天</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">SCOPE</span>
+            <span class="meta-value">iOS数据表现、玩家反馈、版本活动与商业化</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="executive-summary" aria-labelledby="summary-title">
+        <h2 class="summary-label" id="summary-title">CORE FINDING</h2>
+        <p>版本上线后将7—8月的低迷排名拉升至畅销榜第5，但首周流水与下载量均处于近一年日卡及混池的低位。核心粉丝集中冲榜带来了短期排名反弹，却没有同步带动收入、新增和大规模回游，版本仍未完全消化6.0风波后的用户流失与信任损耗。</p>
+      </section>
+
+      <section class="metrics" aria-label="核心数据">
+        <article class="metric">
+          <strong>#5</strong>
+          <span>8月17日游戏畅销榜排名</span>
+        </article>
+        <article class="metric">
+          <strong>273.42万</strong>
+          <span>首周预估流水，较祁煜2.0首发下降63.4%</span>
+        </article>
+        <article class="metric">
+          <strong>41,908</strong>
+          <span>首周预估下载量，较祁煜2.0首发下降47.6%</span>
+        </article>
+        <article class="metric">
+          <strong>≈5,000/日</strong>
+          <span>峰值后下载回落水平，新增获取能力偏弱</span>
+        </article>
+      </section>
+
+      <section class="chapter" id="performance" aria-labelledby="performance-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">01</div>
+          <div>
+            <p class="section-tag">DATA PERFORMANCE</p>
+            <h2 id="performance-title">排名回升，并不等于大盘恢复</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>祁煜3.0日卡首日进入游戏畅销榜第5、总榜畅销第9，结束了此前一段时间的排名低谷。但把排名与首周体量放在一起看，恢复程度仍然有限：首周预估流水为273.42万元，较祁煜2.0日卡首发下降63.4%；首周预估下载量为41,908次，较祁煜2.0首发下降47.6%。</p>
+          <p>下载量在8月18日达到8,204次的首周峰值，随后回落至约5,000次／日。与近一年混池相比，3.0日卡的首周流水和下载量同样偏低。由此更适合把这次表现理解为<strong>短期冲榜成功</strong>，而不是收入与新增体量已经恢复。</p>
+        </div>
+        <figure>
+          <img src="assets/01-ranking-not-recovery.webp" alt="像素插画：角色托起榜单第五名徽章，但流水与下载指标仍处于低位" width="1672" height="940" />
+          <figcaption>榜单名次是高可见度结果，流水与下载量则更接近版本实际承接规模；两者在本次版本中出现明显分离。</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="trust" aria-labelledby="trust-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">02</div>
+          <div>
+            <p class="section-tag">KEY ATTRIBUTION</p>
+            <h2 id="trust-title">多重争议叠加，玩家信任链路断裂</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>7—8月卡池投放较少，在游玩家拥有较长的资源积累时间，这为版本首日排名提供了条件；但它也意味着本次付费受到存量资源影响，不能直接视为新增付费意愿增强。与此同时，6.0版本前后的多项争议持续影响玩家对后续内容的预期。</p>
+          <div class="two-column">
+            <article class="analysis-block">
+              <h3>新男主官宣与取消</h3>
+              <p>在既有五位男主产能已被质疑的背景下，敖尹官宣加剧资源分配担忧；6月30日取消上线后，不支持与支持上线的玩家又分别出现退游和持续维权，两个群体均产生信任损耗。</p>
+            </article>
+            <article class="analysis-block">
+              <h3>6.0内容与人设争议</h3>
+              <p>厨房区域更新中的角色行为被部分玩家认为存在OOC；前序篮球卡也因剧情与画面表达受到批评，削弱了版本间的内容承接。</p>
+            </article>
+            <article class="analysis-block">
+              <h3>文本与宣发口径</h3>
+              <p>实验体编号、传统节日称谓及大陆与海外宣发差异等问题被重新讨论，进一步放大了玩家对文本审核和内容立场的敏感度。</p>
+            </article>
+            <article class="analysis-block">
+              <h3>上线时间反复</h3>
+              <p>官方此前预告祁煜日卡于7月上线，客服随后回复调整至8月，最终在夏以昼月卡之后于8月下旬推出，前后口径不一致继续消耗预期。</p>
+            </article>
+          </div>
+        </div>
+        <figure>
+          <img src="assets/02-trust-bridge-break.webp" alt="像素插画：四类争议压在断裂的信任桥上，玩家从两端离开" width="1672" height="941" loading="lazy" />
+          <figcaption>问题并非单点爆发：角色规划、内容表现、文本争议和排期沟通共同作用，最终影响的是玩家的长期回游意愿。</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="ranking" aria-labelledby="ranking-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">03</div>
+          <div>
+            <p class="section-tag">RANKING MECHANISM</p>
+            <h2 id="ranking-title">核心粉丝集中投入，制造榜单峰值</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>祁煜与秦彻的往期日卡表现相对更好，仍在游的祁煜推具备较强消费能力。经历约一个月的空池与资源储备后，这部分用户仍愿意为新日卡付费，成为首日排名的重要支撑。</p>
+          <p>社区同时出现“日卡守护大赛”等应援活动，以iOS手游端充值记录作为参与凭证，并设置手机、黄金项链等奖品。这类组织化应援能够把消费集中到短时间窗口，因此更容易体现在榜单名次上；但首周流水仍显著低于往期，说明这次表现更接近<strong>核心群体集中冲榜</strong>，而非沉默用户和退游用户大规模回归。</p>
+        </div>
+        <figure>
+          <img src="assets/03-core-fans-ranking-push.webp" alt="像素插画：少量核心粉丝合力将卡牌车推上榜单第五名" width="1672" height="941" loading="lazy" />
+          <figcaption>集中消费可以快速推高排名，却不能自动转化为更宽的人群覆盖、稳定新增或持续收入。</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="card" aria-labelledby="card-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">04</div>
+          <div>
+            <p class="section-tag">CARD & CONTENT</p>
+            <h2 id="card-title">高饱和武将感，覆盖了角色原有锚点</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>卡面整体使用高饱和红色、金属纹样与强战斗特效，部分玩家将其概括为“一刀999”式网游风，认为它与祁煜此前清透、浪漫和海洋感较强的视觉印象存在差异。暖调打光同时覆盖服装、肤色与背景，也使紫色发色、蓝粉交错瞳孔等辨识锚点变得不够清晰。</p>
+          <p>社区还讨论了卡面设计与其他古风卡的相似性，以及某些角度下角色建模相似的问题。这些内容属于<strong>玩家质疑与主观反馈</strong>，不能直接等同于制作事实，但集中反映出用户对角色差异化和美术独特性的敏感程度。</p>
+          <ul>
+            <li><strong>剧情：</strong>将军身份和完全IF线设定被部分玩家认为较通用，未能像前两张日卡一样补充祁煜既有世界观。</li>
+            <li><strong>战斗：</strong>新日卡连招、充能与节奏要求较高；无法熟练掌握多种连招时，较难稳定打出伤害。</li>
+          </ul>
+        </div>
+        <figure>
+          <img src="assets/04-character-anchor-dilution.webp" alt="像素插画：角色从红金暖色颜料中抢救紫发、蓝粉眼睛与海浪视觉锚点" width="1672" height="941" loading="lazy" />
+          <figcaption>风格升级需要放大角色独特性，而不是让通用题材与统一暖光把原有识别点染成同一种颜色。</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="activity" aria-labelledby="activity-title">
+        <div class="chapter-heading">
+          <div class="chapter-number">05</div>
+          <div>
+            <p class="section-tag">ACTIVITY LOOP</p>
+            <h2 id="activity-title">每日限次，把剧情、玩法与奖励串成持续参与</h2>
+          </div>
+        </div>
+        <div class="chapter-copy">
+          <p>主题活动以探索进度作为主线。玩家每天可探索两次，也可使用10红钻补购一次；完成探索节点后，依次解锁对话、小游戏和战斗，并在活动开启约8天后阅读完全部剧情。完成全部探索可获得限定四星卡牌。</p>
+          <p>玩法层面，固定阵容战斗承担新卡局内效果试玩；推石块小游戏提供轻量操作；完成小游戏后还会获得特殊道具并触发祁煜专属对话。限时任务产出的活动积分则进入活动商店兑换，构成<strong>日常进入—玩法体验—剧情反馈—积分兑换—核心奖励</strong>的完整链路。</p>
+        </div>
+        <figure>
+          <img src="assets/05-event-participation-loop.webp" alt="像素插画：每日票券入口依次连接对话、推石块、战斗、积分商店和四星卡奖励" width="1672" height="941" loading="lazy" />
+          <figcaption>活动同时要求活跃频次与时间跨度；多种玩法提供内容变化，最终由专属剧情、积分商店与限定卡牌完成奖励承接。</figcaption>
+        </figure>
+      </section>
+
+      <section class="commercial" aria-labelledby="commercial-title">
+        <h2 id="commercial-title">商业化补充观察</h2>
+        <div class="commercial-copy">
+          <div>
+            <p>版本礼包结构与往期日卡基本保持一致，并叠加七夕情侣服饰「流景扬辉」。一组礼匣包含男主和女主配套服饰各一套，通过第二组、第三组阶梯折扣促进多套购买；写真背景则以紫钻折扣价单独售卖。</p>
+            <p>服饰供给覆盖男主通用长外套、主控马面裙与改良外套等国风组合，延续版本美术主题。8月24日又叠加新一轮密约，为日卡活动后半程补充持续付费点。</p>
+          </div>
+          <div class="price-stack" aria-label="服装礼盒价格">
+            <div class="price-row"><span>第一组礼匣</span><strong>36元</strong></div>
+            <div class="price-row"><span>第二组礼匣</span><strong>28元</strong></div>
+            <div class="price-row"><span>第三组礼匣</span><strong>18元</strong></div>
+            <div class="price-row"><span>写真背景</span><strong>180紫钻</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="closing-grid">
+          <div>
+            <h2 id="closing-title">结论</h2>
+            <p>祁煜3.0日卡证明核心角色和核心粉丝仍具备短时间冲榜能力，但低于往期的首周流水与下载量说明，榜单反弹尚未转化为大盘恢复。版本真正需要修复的并非单一卡池强度，而是角色差异化、内容质量、产能安排与官方沟通共同构成的长期信任。</p>
+            <div class="closing-actions" id="report-actions" aria-label="报告页面操作">
+              <a class="back-link" href="../">返回作品集</a>
+              <a class="back-link original-link" href="original/">查看原文</a>
+            </div>
+          </div>
+          <div class="takeaway">短期排名由集中消费推动；长期恢复仍取决于内容与信任的重新承接。</div>
+        </div>
+        <p class="source-note">数据口径：iOS预估数据，来源为原报告引用的七麦数据。玩家反馈部分来自版本期间社区观察，均以“部分玩家认为”“社区质疑”等口径呈现，不作为官方事实判断。</p>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const progress = document.querySelector(".scroll-progress");
+        const updateProgress = () => {
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          const ratio = max > 0 ? window.scrollY / max : 0;
+          progress.style.width = `${Math.min(1, Math.max(0, ratio)) * 100}%`;
+        };
+        updateProgress();
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+      })();
+    </script>
+  </body>
+</html>

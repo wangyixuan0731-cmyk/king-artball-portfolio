@@ -1,0 +1,65 @@
+{
+  "source": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/motion/pilot/frames",
+  "frameCount": 2,
+  "canvas": [
+    1230,
+    1278
+  ],
+  "summary": {
+    "medianSubjectHeightRatio": 0.8708920187793427,
+    "subjectHeightRange": [
+      0.8701095461658842,
+      0.8716744913928013
+    ],
+    "centerXRange": [
+      0.4983739837398374,
+      0.4983739837398374
+    ],
+    "centerYRange": [
+      0.5312989045383412,
+      0.5312989045383412
+    ],
+    "medianFrameDifference": 0.038572729438997824,
+    "warningCount": 0
+  },
+  "warnings": [],
+  "frames": [
+    {
+      "index": 0,
+      "file": "00-center.png",
+      "width": 1230,
+      "height": 1278,
+      "bbox": [
+        301,
+        123,
+        925,
+        1235
+      ],
+      "luminance": 0.373402178161876,
+      "subjectWidthRatio": 0.5073170731707317,
+      "subjectHeightRatio": 0.8701095461658842,
+      "centerX": 0.4983739837398374,
+      "centerY": 0.5312989045383412,
+      "occupancy": 0.44142142829879005
+    },
+    {
+      "index": 1,
+      "file": "01-e.png",
+      "width": 1230,
+      "height": 1278,
+      "bbox": [
+        312,
+        122,
+        914,
+        1236
+      ],
+      "luminance": 0.3603994622766134,
+      "subjectWidthRatio": 0.4894308943089431,
+      "subjectHeightRatio": 0.8716744913928013,
+      "centerX": 0.4983739837398374,
+      "centerY": 0.5312989045383412,
+      "occupancy": 0.42662442586867183,
+      "differenceFromPrevious": 0.038572729438997824
+    }
+  ]
+}
