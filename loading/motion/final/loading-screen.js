@@ -58,7 +58,7 @@
     try {
       const [timeline, atlas] = await Promise.all([
         loadJson("loading/motion/build/timeline.json"),
-        loadJson("loading/motion/final/loading-run-atlas.json"),
+        loadJson("loading/motion/final/loading-run-atlas-v2.json"),
       ]);
 
       if (reducedMotion) {

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST_PATH = ROOT / "final" / "loading-run-atlas.json"
+MANIFEST_PATH = ROOT / "final" / "loading-run-atlas-v2.json"
 OUTPUT_PATH = ROOT / "build" / "timeline.json"
 
 manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))

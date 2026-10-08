@@ -1,11 +1,15 @@
 {
   "schemaVersion": 1,
   "environment": "local in-app browser",
-  "testedUrl": "http://127.0.0.1:4173/homepage-layout-draft/?loader=1",
+  "testedUrl": "http://127.0.0.1:4173/homepage-layout-draft/?loader=1&qa=layout-v2-desktop",
   "checks": {
     "loaderVisibleOnForcedEntry": true,
     "atlasDecoded": true,
     "framePositionChangedDuringPlayback": true,
+    "allSixFramesFaceRight": true,
+    "approvedTitleArtworkLoaded": true,
+    "approvedOrangeBallArtworkLoaded": true,
+    "progressPlacedUnderTitle": true,
     "loadingDurationSeconds": 5,
     "progressReachedPercent": 100,
     "loaderHiddenAfterCompletion": true,
@@ -15,6 +19,8 @@
   },
   "notes": [
     "The query parameter loader=1 forces the loading screen for review.",
+    "The revised six-frame contact sheet was visually checked; every pose faces screen-right.",
+    "The local desktop screenshot confirms the approved title, orange ball, and title-bottom progress layout.",
     "Within the same tab session, returning to the homepage skips the loader.",
     "The reduced-motion path is implemented as a short static fallback and was inspected in code."
   ]

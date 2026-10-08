@@ -1,35 +1,35 @@
 {
   "schemaVersion": 1,
   "passed": true,
-  "approvedAt": "2026-10-08T12:26:02.711907+00:00",
-  "reviewer": "User approval + Codex local browser QA",
+  "approvedAt": "2026-10-08T13:50:50.024705+00:00",
+  "reviewer": "User correction + Codex local browser QA",
   "continuityMode": "chain",
-  "notes": "Approved asset design integrated as a six-frame alpha atlas; verified 5-second playback, progress completion, and session-return skip in local browser.",
+  "notes": "Revised to six right-facing frames only. Approved preview title and orange-ball art are now used directly; the single live progress bar is placed beneath the title.",
   "artifacts": {
     "conceptContract": {
       "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/source/concept-contract.yaml",
-      "bytes": 713,
-      "sha256": "cd153592c54f827d25568cba297bbd42974ac66b987528537c0008ae90dc7de7"
+      "bytes": 879,
+      "sha256": "1431f7cae0a3011704c7b8c25c04a298788ec8cb02236f9e9935443650b02162"
     },
     "firstFrame": {
       "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/frames/final/frame-00.png",
-      "bytes": 123406,
-      "sha256": "bb6a10411dafd73160435c93d7b2db3549e279350b15a42a09dec1d56ff3665e"
+      "bytes": 177227,
+      "sha256": "a4b19bc7dadfc1080852b311cd12b389558ca8b3886e42a57e47df134c186a9b"
     },
     "lastFrame": {
       "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/frames/final/frame-05.png",
-      "bytes": 121854,
-      "sha256": "04d42af71b4a33ef37ded4bc97eeaa35504878c3cc094107d50e5f1e32432cfc"
+      "bytes": 167705,
+      "sha256": "38ab458b245acf52b0435ae02079668676a1338ab2fd615fab6243aac34fe4b8"
     },
     "pilotVideo": {
-      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/final/loading-run-atlas.webp",
-      "bytes": 473322,
-      "sha256": "20dfa020cb9635218d271394362495db55c9f6d299d5fce5ad4fe889800198c3"
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/final/loading-run-atlas-v2.webp",
+      "bytes": 675794,
+      "sha256": "c57202a25c6076b1dee277a518cb63ff2894d673fd2334cad68e7a7167234531"
     },
     "pageEvidence": {
-      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/qa/final-contact.jpg",
-      "bytes": 46852,
-      "sha256": "c953955d21870636a2606273a2f419d9fdd93c14e581085f505e66915b10b26c"
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/qa/loading-page-local-v2.png",
+      "bytes": 117446,
+      "sha256": "c3d269653f26564d46cee6426aa1a82bdf449dc329be315ebf8478df70a6ea20"
     },
     "identityBible": {
       "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/source/identity-bible.md",

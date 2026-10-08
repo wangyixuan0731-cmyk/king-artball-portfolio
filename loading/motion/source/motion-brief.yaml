@@ -9,6 +9,7 @@ gesture_policy:
   boundary: loop
   programmatic_navigation: ignore
 storyboard: 右脚落地到腾空再到左脚落地的六阶段闭环奔跑
+direction_lock: 六帧全部朝向画面右侧，头发统一向左后方飘动
 keyframes:
   - K0: 右脚前伸触地，左脚后摆，左臂前摆
   - K1: 身体下压经过右脚支撑，后腿向前回收
@@ -23,6 +24,6 @@ anchor: center
 scene_continuity: null
 frame_policy: native
 target_fps: 9
-quality_target: 512x512透明单帧，以不超过480x480 CSS尺寸显示，粗颗粒像素边缘，图集不超过1536x1024
+quality_target: 512x512透明单帧，以不超过512x512 CSS尺寸显示，粗颗粒像素边缘，图集不超过1536x1024
 pixel_dimensions: 512x512 per frame; 1536x1024 atlas
 reduced_motion: 显示K0静态帧并直接完成进度条

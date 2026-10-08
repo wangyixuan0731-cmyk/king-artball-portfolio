@@ -6,27 +6,27 @@
     512
   ],
   "summary": {
-    "medianSubjectHeightRatio": 0.888671875,
+    "medianSubjectHeightRatio": 0.927734375,
     "subjectHeightRange": [
-      0.87109375,
-      0.896484375
+      0.904296875,
+      0.962890625
     ],
     "centerXRange": [
-      0.4521484375,
-      0.54296875
+      0.435546875,
+      0.5576171875
     ],
     "centerYRange": [
-      0.47265625,
-      0.513671875
+      0.474609375,
+      0.5478515625
     ],
-    "medianFrameDifference": 0.09008430918663761,
+    "medianFrameDifference": 0.18213365786129265,
     "warningCount": 1
   },
   "warnings": [
     {
       "frame": 3,
       "type": "center-jump",
-      "value": 0.0910772156145628,
+      "value": 0.1304688961919091,
       "message": "frame-03.png moves the subject center abruptly"
     }
   ],
@@ -37,17 +37,17 @@
       "width": 512,
       "height": 512,
       "bbox": [
-        83,
-        34,
-        438,
-        492
+        67,
+        48,
+        491,
+        512
       ],
-      "luminance": 0.31612900551341044,
-      "subjectWidthRatio": 0.693359375,
-      "subjectHeightRatio": 0.89453125,
-      "centerX": 0.5087890625,
-      "centerY": 0.513671875,
-      "occupancy": 0.6202316284179688
+      "luminance": 0.2984173025081207,
+      "subjectWidthRatio": 0.828125,
+      "subjectHeightRatio": 0.90625,
+      "centerX": 0.544921875,
+      "centerY": 0.546875,
+      "occupancy": 0.75048828125
     },
     {
       "index": 1,
@@ -55,18 +55,18 @@
       "width": 512,
       "height": 512,
       "bbox": [
-        55,
-        35,
-        414,
-        486
+        42,
+        48,
+        461,
+        512
       ],
-      "luminance": 0.30694686119188586,
-      "subjectWidthRatio": 0.701171875,
-      "subjectHeightRatio": 0.880859375,
-      "centerX": 0.4580078125,
-      "centerY": 0.5087890625,
-      "occupancy": 0.6176338195800781,
-      "differenceFromPrevious": 0.1441478587962963
+      "luminance": 0.28893127036222216,
+      "subjectWidthRatio": 0.818359375,
+      "subjectHeightRatio": 0.90625,
+      "centerX": 0.4912109375,
+      "centerY": 0.546875,
+      "occupancy": 0.74163818359375,
+      "differenceFromPrevious": 0.18213365786129265
     },
     {
       "index": 2,
@@ -74,18 +74,18 @@
       "width": 512,
       "height": 512,
       "bbox": [
-        45,
-        27,
-        418,
-        479
+        16,
+        49,
+        440,
+        512
       ],
-      "luminance": 0.30665042760803995,
-      "subjectWidthRatio": 0.728515625,
-      "subjectHeightRatio": 0.8828125,
-      "centerX": 0.4521484375,
-      "centerY": 0.494140625,
-      "occupancy": 0.6431427001953125,
-      "differenceFromPrevious": 0.09008430918663761
+      "luminance": 0.2941737893207295,
+      "subjectWidthRatio": 0.828125,
+      "subjectHeightRatio": 0.904296875,
+      "centerX": 0.4453125,
+      "centerY": 0.5478515625,
+      "occupancy": 0.748870849609375,
+      "differenceFromPrevious": 0.17694716775599129
     },
     {
       "index": 3,
@@ -93,18 +93,18 @@
       "width": 512,
       "height": 512,
       "bbox": [
-        94,
-        20,
-        462,
-        479
+        75,
+        0,
+        496,
+        493
       ],
-      "luminance": 0.3167677643398307,
-      "subjectWidthRatio": 0.71875,
-      "subjectHeightRatio": 0.896484375,
-      "centerX": 0.54296875,
-      "centerY": 0.4873046875,
-      "occupancy": 0.64434814453125,
-      "differenceFromPrevious": 0.18911781726579519
+      "luminance": 0.27926781982034754,
+      "subjectWidthRatio": 0.822265625,
+      "subjectHeightRatio": 0.962890625,
+      "centerX": 0.5576171875,
+      "centerY": 0.4814453125,
+      "occupancy": 0.7917518615722656,
+      "differenceFromPrevious": 0.23516192356572257
     },
     {
       "index": 4,
@@ -112,18 +112,18 @@
       "width": 512,
       "height": 512,
       "bbox": [
-        93,
-        20,
-        460,
-        479
+        42,
+        0,
+        464,
+        486
       ],
-      "luminance": 0.31198352730130435,
-      "subjectWidthRatio": 0.716796875,
-      "subjectHeightRatio": 0.896484375,
-      "centerX": 0.5400390625,
-      "centerY": 0.4873046875,
-      "occupancy": 0.6425971984863281,
-      "differenceFromPrevious": 0.07258178444989108
+      "luminance": 0.29020044060798045,
+      "subjectWidthRatio": 0.82421875,
+      "subjectHeightRatio": 0.94921875,
+      "centerX": 0.494140625,
+      "centerY": 0.474609375,
+      "occupancy": 0.7823638916015625,
+      "differenceFromPrevious": 0.19310590845134348
     },
     {
       "index": 5,
@@ -131,18 +131,18 @@
       "width": 512,
       "height": 512,
       "bbox": [
-        94,
-        19,
-        462,
-        465
+        14,
+        0,
+        432,
+        493
       ],
-      "luminance": 0.3038857682962079,
-      "subjectWidthRatio": 0.71875,
-      "subjectHeightRatio": 0.87109375,
-      "centerX": 0.54296875,
-      "centerY": 0.47265625,
-      "occupancy": 0.6260986328125,
-      "differenceFromPrevious": 0.06945054352759623
+      "luminance": 0.2930553316495602,
+      "subjectWidthRatio": 0.81640625,
+      "subjectHeightRatio": 0.962890625,
+      "centerX": 0.435546875,
+      "centerY": 0.4814453125,
+      "occupancy": 0.7861099243164062,
+      "differenceFromPrevious": 0.18185097244916484
     }
   ]
 }

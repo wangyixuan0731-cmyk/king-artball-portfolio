@@ -1,12 +1,12 @@
 {
   "display": {
-    "width": 480,
-    "height": 480,
+    "width": 512,
+    "height": 512,
     "dpr": 1.0
   },
   "requiredCell": {
-    "width": 480,
-    "height": 480
+    "width": 512,
+    "height": 512
   },
   "frames": 6,
   "texture": {
@@ -16,15 +16,15 @@
     "framesPerSheet": 64,
     "sheetCount": 1
   },
-  "decodedFrameMemoryMiB": 5.3,
+  "decodedFrameMemoryMiB": 6.0,
   "sourceCheck": null,
   "cellCheck": {
     "width": 512,
     "height": 512,
-    "required_width": 480,
-    "required_height": 480,
-    "width_ratio": 1.067,
-    "height_ratio": 1.067,
+    "required_width": 512,
+    "required_height": 512,
+    "width_ratio": 1.0,
+    "height_ratio": 1.0,
     "passes": true
   },
   "temporalCheck": null,
