@@ -1,0 +1,141 @@
+{
+  "source": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/frames/final",
+  "frameCount": 6,
+  "canvas": [
+    512,
+    512
+  ],
+  "summary": {
+    "medianSubjectHeightRatio": 0.7646484375,
+    "subjectHeightRange": [
+      0.75,
+      0.771484375
+    ],
+    "centerXRange": [
+      0.4990234375,
+      0.5
+    ],
+    "centerYRange": [
+      0.5341796875,
+      0.55078125
+    ],
+    "medianFrameDifference": 0.06823299632352942,
+    "warningCount": 0
+  },
+  "warnings": [],
+  "frames": [
+    {
+      "index": 0,
+      "file": "frame-00.png",
+      "width": 512,
+      "height": 512,
+      "bbox": [
+        103,
+        82,
+        408,
+        476
+      ],
+      "luminance": 0.33058313698657,
+      "subjectWidthRatio": 0.595703125,
+      "subjectHeightRatio": 0.76953125,
+      "centerX": 0.4990234375,
+      "centerY": 0.544921875,
+      "occupancy": 0.45841217041015625
+    },
+    {
+      "index": 1,
+      "file": "frame-01.png",
+      "width": 512,
+      "height": 512,
+      "bbox": [
+        102,
+        88,
+        410,
+        476
+      ],
+      "luminance": 0.3208019075526818,
+      "subjectWidthRatio": 0.6015625,
+      "subjectHeightRatio": 0.7578125,
+      "centerX": 0.5,
+      "centerY": 0.55078125,
+      "occupancy": 0.45587158203125,
+      "differenceFromPrevious": 0.06823299632352942
+    },
+    {
+      "index": 2,
+      "file": "frame-02.png",
+      "width": 512,
+      "height": 512,
+      "bbox": [
+        96,
+        79,
+        415,
+        468
+      ],
+      "luminance": 0.32033358233436493,
+      "subjectWidthRatio": 0.623046875,
+      "subjectHeightRatio": 0.759765625,
+      "centerX": 0.4990234375,
+      "centerY": 0.5341796875,
+      "occupancy": 0.4733695983886719,
+      "differenceFromPrevious": 0.07430867601670298
+    },
+    {
+      "index": 3,
+      "file": "frame-03.png",
+      "width": 512,
+      "height": 512,
+      "bbox": [
+        98,
+        81,
+        413,
+        476
+      ],
+      "luminance": 0.3311741715362385,
+      "subjectWidthRatio": 0.615234375,
+      "subjectHeightRatio": 0.771484375,
+      "centerX": 0.4990234375,
+      "centerY": 0.5439453125,
+      "occupancy": 0.4746437072753906,
+      "differenceFromPrevious": 0.1349890216503268
+    },
+    {
+      "index": 4,
+      "file": "frame-04.png",
+      "width": 512,
+      "height": 512,
+      "bbox": [
+        99,
+        81,
+        412,
+        476
+      ],
+      "luminance": 0.3260944732852288,
+      "subjectWidthRatio": 0.611328125,
+      "subjectHeightRatio": 0.771484375,
+      "centerX": 0.4990234375,
+      "centerY": 0.5439453125,
+      "occupancy": 0.4716300964355469,
+      "differenceFromPrevious": 0.05945783405954975
+    },
+    {
+      "index": 5,
+      "file": "frame-05.png",
+      "width": 512,
+      "height": 512,
+      "bbox": [
+        98,
+        84,
+        414,
+        468
+      ],
+      "luminance": 0.3192097470125432,
+      "subjectWidthRatio": 0.6171875,
+      "subjectHeightRatio": 0.75,
+      "centerX": 0.5,
+      "centerY": 0.5390625,
+      "occupancy": 0.462890625,
+      "differenceFromPrevious": 0.05391476034858387
+    }
+  ]
+}

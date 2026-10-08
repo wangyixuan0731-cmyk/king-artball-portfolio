@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "type": "sprite-atlas",
+  "asset": "loading-run-atlas.webp",
+  "frameCount": 6,
+  "columns": 3,
+  "rows": 2,
+  "cellWidth": 512,
+  "cellHeight": 512,
+  "atlasWidth": 1536,
+  "atlasHeight": 1024,
+  "quality": 88,
+  "lossless": true,
+  "files": [
+    "frame-00.png",
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png"
+  ]
+}

@@ -1,0 +1,28 @@
+concept_contract: source/concept-contract.yaml
+identity_bible: source/identity-bible.md
+parameter_space: circular
+media_access: random
+gesture_policy:
+  unit: continuous
+  inertia: preserve
+  while_active: ignore
+  boundary: loop
+  programmatic_navigation: ignore
+storyboard: 右脚落地到腾空再到左脚落地的六阶段闭环奔跑
+keyframes:
+  - K0: 右脚前伸触地，左脚后摆，左臂前摆
+  - K1: 身体下压经过右脚支撑，后腿向前回收
+  - K2: 右脚蹬地腾空，双腿交错，头发向后扬起
+  - K3: 左脚前伸触地，右脚后摆，右臂前摆
+  - K4: 身体下压经过左脚支撑，后腿向前回收
+  - K5: 左脚蹬地腾空，双腿交错，返回K0前一阶段
+clip_chain: K0-K1-K2-K3-K4-K5-K0
+rest_state: K0
+loop: closed
+anchor: center
+scene_continuity: null
+frame_policy: native
+target_fps: 9
+quality_target: 512x512透明单帧，以不超过480x480 CSS尺寸显示，粗颗粒像素边缘，图集不超过1536x1024
+pixel_dimensions: 512x512 per frame; 1536x1024 atlas
+reduced_motion: 显示K0静态帧并直接完成进度条

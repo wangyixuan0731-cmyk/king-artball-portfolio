@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "fps": 9,
+  "frameDuration": 0.1111111111111111,
+  "loadingDuration": 5,
+  "initialState": "running",
+  "states": [
+    {
+      "id": "running",
+      "hold": 0
+    }
+  ],
+  "segments": [
+    {
+      "id": "run-loop",
+      "from": "running",
+      "to": "running",
+      "start": 0,
+      "hold": 0.5555555555555556,
+      "endExclusive": 0.6666666666666666,
+      "curve": {
+        "type": "constant",
+        "rate": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+subject_count: 1
+subjects:
+  - identity: King Artball established female chibi pixel avatar
+style: Q版粗颗粒低像素风，橙黄色明媚配色，深棕粗描边
+motion_intent: 角色以右向完整侧面姿势原地循环奔跑，头发和衣摆随步伐轻微摆动
+background_owner: page
+scene: null
+driver: time
+input_semantics: continuous
+time_control: autonomous
+navigation: none
+clip_continuity: chain
+continuity:
+  - 黑棕中长披发与八字刘海
+  - 黑色圆框眼镜
+  - 白色吊带与黑色短坎肩
+  - 水洗蓝宽腿牛仔裤
+  - 黑色板鞋
+  - 完整右向侧面与固定人物比例
+aspect_ratio: 1:1
+destination: 桌面端加载页橙色球体中央，最大CSS显示尺寸480x480px

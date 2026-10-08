@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "approvedAt": "2026-10-08T12:26:02.711907+00:00",
+  "reviewer": "User approval + Codex local browser QA",
+  "continuityMode": "chain",
+  "notes": "Approved asset design integrated as a six-frame alpha atlas; verified 5-second playback, progress completion, and session-return skip in local browser.",
+  "artifacts": {
+    "conceptContract": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/source/concept-contract.yaml",
+      "bytes": 713,
+      "sha256": "cd153592c54f827d25568cba297bbd42974ac66b987528537c0008ae90dc7de7"
+    },
+    "firstFrame": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/frames/final/frame-00.png",
+      "bytes": 123406,
+      "sha256": "bb6a10411dafd73160435c93d7b2db3549e279350b15a42a09dec1d56ff3665e"
+    },
+    "lastFrame": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/frames/final/frame-05.png",
+      "bytes": 121854,
+      "sha256": "04d42af71b4a33ef37ded4bc97eeaa35504878c3cc094107d50e5f1e32432cfc"
+    },
+    "pilotVideo": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/final/loading-run-atlas.webp",
+      "bytes": 473322,
+      "sha256": "20dfa020cb9635218d271394362495db55c9f6d299d5fce5ad4fe889800198c3"
+    },
+    "pageEvidence": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/qa/final-contact.jpg",
+      "bytes": 46852,
+      "sha256": "c953955d21870636a2606273a2f419d9fdd93c14e581085f505e66915b10b26c"
+    },
+    "identityBible": {
+      "path": "/Users/Watanaberie/Documents/Codex/2026-10-06/wo-sh/outputs/homepage-layout-draft/loading/motion/source/identity-bible.md",
+      "bytes": 728,
+      "sha256": "53f7082133f00946f1e5831e1fa4c48d47a31fc7444ceeda6d3eafcd794a25d4"
+    }
+  }
+}
