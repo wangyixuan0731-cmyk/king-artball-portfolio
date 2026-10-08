@@ -55,7 +55,6 @@
   };
 
   const start = async () => {
-    const startTime = performance.now();
     try {
       const [timeline, atlas] = await Promise.all([
         loadJson("loading/motion/build/timeline.json"),
@@ -74,6 +73,7 @@
       runner.style.backgroundImage = `url("${atlasImage.src}")`;
       runner.style.backgroundSize = `${atlas.columns * 100}% ${atlas.rows * 100}%`;
 
+      const startTime = performance.now();
       const durationMs = timeline.loadingDuration * 1000;
       const tick = (now) => {
         const elapsed = Math.max(0, now - startTime);
