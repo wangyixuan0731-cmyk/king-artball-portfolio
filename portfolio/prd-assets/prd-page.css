@@ -191,6 +191,22 @@ h1 {
   padding: 24px;
 }
 
+.gameplay-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1916 / 1076;
+  border: 5px solid var(--ink);
+  background: #1e100d;
+  box-shadow: 7px 7px 0 rgba(74, 36, 29, 0.88);
+  object-fit: contain;
+}
+
+.gameplay-video:focus-visible {
+  outline: 4px solid var(--blue);
+  outline-offset: 5px;
+}
+
 .video-placeholder {
   position: relative;
   display: grid;
