@@ -207,6 +207,10 @@ h1 {
   outline-offset: 5px;
 }
 
+.gameplay-video--paged-gift {
+  aspect-ratio: 1580 / 696;
+}
+
 .video-placeholder {
   position: relative;
   display: grid;
