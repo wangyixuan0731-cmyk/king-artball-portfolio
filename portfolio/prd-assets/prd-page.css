@@ -296,6 +296,10 @@ h1 {
     repeating-linear-gradient(0deg, transparent 0 24px, rgba(255, 116, 39, 0.07) 24px 27px);
 }
 
+.document-frame--empty {
+  background: rgba(255, 250, 229, 0.96);
+}
+
 .document-frame:focus-visible {
   outline: 4px solid var(--blue);
   outline-offset: -6px;
